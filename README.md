@@ -8,7 +8,7 @@ It is located at: https://jacob-brown.github.io/programming-notes-book/
 
 * Locally, make the desired changes to the book
 * build the book `jb build programming_notes`
-* `cd` and run `ghp-import -n -p -f programming_notes/_build/html`
+* deploy `ghp-import -n -p -f programming_notes/_build/html`
 * add, commit, and push. 
 * It should take ~5 mins to update the online version. 
 

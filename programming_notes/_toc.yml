@@ -7,6 +7,7 @@
   chapters:
   - file: python
   - file: shell
+    title: Shell # added as title doesn't always show with notebooks
 
 - part: Appendix
   chapters:

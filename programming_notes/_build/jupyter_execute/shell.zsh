@@ -2,5 +2,5 @@
 
 pwd
 
-ls *
+ls -al
 

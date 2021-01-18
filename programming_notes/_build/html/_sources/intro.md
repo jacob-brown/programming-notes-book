@@ -1,7 +1,7 @@
-Welcome to your Jupyter Book
+Hello there
 ============================
 
-This is a small sample book to give you a feel for how book content is
-structured.
+My personal programming notes.
 
-Check out the content pages bundled with this sample book to get started.
+## Resources
+* [https://jupyterbook.org/intro.html](https://jupyterbook.org/intro.html)

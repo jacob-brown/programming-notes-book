@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello there &#8212; Programming Notes</title>
+    <title>2. Shell &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,7 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Python" href="python.html" />
+    <link rel="next" title="1. Appendix: Adding content" href="content.html" />
+    <link rel="prev" title="1. Python" href="python.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -87,8 +88,8 @@
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Hello there
   </a>
  </li>
@@ -98,14 +99,14 @@
   Language specific
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="python.html">
    1. Python
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shell.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    2. Shell
   </a>
  </li>
@@ -171,9 +172,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/shell.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -191,26 +192,27 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/shell.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources">
-   Resources
-  </a>
-  <ul class="nav section-nav flex-column">
-  </ul>
- </li>
-</ul>
-
-        </nav>
         
     </div>
 </div>
@@ -219,17 +221,51 @@
         
               <div>
                 
-  <div class="section" id="hello-there">
-<h1>Hello there<a class="headerlink" href="#hello-there" title="Permalink to this headline">¶</a></h1>
-<p>My personal programming notes.</p>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://jupyterbook.org/intro.html">https://jupyterbook.org/intro.html</a></p></li>
-</ul>
-<div class="toctree-wrapper compound">
+  <div class="section" id="shell">
+<h1><span class="section-number">2. </span>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jacobbrown/Documents/Productivity/notes_Jupyter/mynotesbook/programming_notes/programming_notes
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls *
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">_config.yml</span>     content.md      markdown.md     python.ipynb    shell.ipynb
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_toc.yml        intro.md        notebooks.ipynb references.bib
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_build:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">html</span>            <span class=" -Color -Color-Bold -Color-Bold-Cyan">jupyter_execute</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>img:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gandalf.jpg logo.png
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -243,16 +279,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "zsh"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "zsh",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'zsh'</script>
 
               </div>
               
@@ -262,7 +298,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="python.html" title="next page"><span class="section-number">1. </span>Python</a>
+    <a class='left-prev' id="prev-link" href="python.html" title="previous page"><span class="section-number">1. </span>Python</a>
+    <a class='right-next' id="next-link" href="content.html" title="next page"><span class="section-number">1. </span>Appendix: Adding content</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

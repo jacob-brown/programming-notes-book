@@ -1,0 +1,6 @@
+# Shell
+
+pwd
+
+ls *
+

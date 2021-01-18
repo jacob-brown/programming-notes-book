@@ -2,9 +2,14 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 - file: intro
   numbered: true
-- file: python
-  numbered: true
-- file: content
-  sections:
-    - file: markdown
-    - file: notebooks
+
+- part: Language specific
+  chapters:
+  - file: python
+  - file: shell
+
+- part: Appendix
+  chapters:
+  - file: content
+  - file: markdown
+  - file: notebooks

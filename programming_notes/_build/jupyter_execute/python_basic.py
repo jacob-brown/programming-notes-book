@@ -1,5 +1,6 @@
-# Basics
-## Lists
+# Python: Basics
+
+### Lists
 Methods: 
 
 * `append()`
@@ -56,7 +57,7 @@ print(demoList)
 demoList.clear() # removes all items
 print(demoList)
 
-## Copying a list
+### Copying a list
 make sure the lists aren't linked, with a deep copy
 
 thislist = ["apple", "banana", "cherry"]
@@ -67,7 +68,7 @@ del thislist[1]
 print(thislist)
 print(mylist)
 
-## Tuples
+### Tuples
 
 unchangeable
 
@@ -77,7 +78,7 @@ unchangeable
 tupExample = (1, 2, 3)
 tupExample
 
-## Sets
+### Sets
 unordered and unindexed, adding/removing is possible but not changing
 
 
@@ -89,7 +90,7 @@ thisset.add("orange")
 
 print(thisset) 
 
-## Dictionaries
+### Dictionaries
 
 fruitDict = {
     "type" : "apple",
@@ -132,7 +133,7 @@ print(fruitDict["season"])
 del fruitDict["colour"]
 print(fruitDict)
 
-# Loops
+## Loops
 
 
 for i in range(0,5):
@@ -171,7 +172,7 @@ while i < 6:
 else:
   print("i is no longer less than 6")
 
-# Conditions (If..Else)
+## Conditions (If..Else)
 
 a = 2
 b = 20
@@ -197,7 +198,7 @@ use `pass` to avoid an error.
 if 1 > 10:
     pass
 
-# List Comprehension
+## List Comprehension
 
 newList = ["apple", "banana", "cherry"]
 
@@ -209,7 +210,7 @@ newList = ["apple", "banana", "cherry"]
 
 [x.upper() for x in newList]
 
-# Functions and lambda
+## Functions and lambda
 
 lambda can have only one expression
 
@@ -225,7 +226,7 @@ addTen(2)
 x = lambda a, b : a * b
 print(x(5, 6)) 
 
-# Modules
+## Modules
 Code library or a local `.py` file
 
 import numpy as np
@@ -236,7 +237,7 @@ from pandas import DataFrame as df
 
 df([1,2,3])
 
-# RegEx
+## RegEx
 `import re`
 
 `re.` methods:
@@ -252,7 +253,7 @@ df([1,2,3])
 *from w3*
 
 
-# File Handling
+## File Handling
 
 `open(filename, mode)`
 

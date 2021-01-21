@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Appendix: Adding content &#8212; Programming Notes</title>
+    <title>3. R &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Markdown Files" href="markdown.html" />
-    <link rel="prev" title="3. R" href="rlang.html" />
+    <link rel="next" title="1. Appendix: Adding content" href="content.html" />
+    <link rel="prev" title="2. Shell" href="shell.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -99,7 +99,7 @@
   Language specific
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="python.html">
    1. Python
@@ -110,8 +110,8 @@
    2. Shell
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rlang.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    3. R
   </a>
  </li>
@@ -121,9 +121,9 @@
   Appendix
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
    1. Appendix: Adding content
   </a>
  </li>
@@ -177,9 +177,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/content.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/rlang.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -197,6 +197,23 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/rlang.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -209,13 +226,20 @@
         
               <div>
                 
-  <div class="section" id="appendix-adding-content">
-<h1><span class="section-number">1. </span>Appendix: Adding content<a class="headerlink" href="#appendix-adding-content" title="Permalink to this headline">¶</a></h1>
-<p><em>left from default build - delete when I get an idea of the structure</em></p>
-<p>JB: mostly use jupyter notebooks for various languages and markdown for others.</p>
-<p>A <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">list</a> of available kernels for jupyter.</p>
-<p>There are many ways to write content in Jupyter Book. This short section
-covers a few tips for how to do so.</p>
+  <div class="section" id="r">
+<h1><span class="section-number">3. </span>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="m">1</span> <span class="o">+</span> <span class="m">1</span> 
+
+<span class="n">a</span> <span class="o">+</span> <span class="m">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">7</div></div>
+</div>
+<p>an obvious eror</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -227,16 +251,16 @@ covers a few tips for how to do so.</p>
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "ir",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
               </div>
               
@@ -246,8 +270,8 @@ covers a few tips for how to do so.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="rlang.html" title="previous page"><span class="section-number">3. </span>R</a>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page"><span class="section-number">2. </span>Markdown Files</a>
+    <a class='left-prev' id="prev-link" href="shell.html" title="previous page"><span class="section-number">2. </span>Shell</a>
+    <a class='right-next' id="next-link" href="content.html" title="next page"><span class="section-number">1. </span>Appendix: Adding content</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

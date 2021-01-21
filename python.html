@@ -110,6 +110,11 @@
    2. Shell
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rlang.html">
+   3. R
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -214,6 +219,121 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics">
+   1.1. Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     1.1.1. Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copying-a-list">
+     1.1.2. Copying a list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuples">
+     1.1.3. Tuples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets">
+     1.1.4. Sets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     1.1.5. Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loops">
+     1.1.6. Loops
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conditions-if-else">
+     1.1.7. Conditions (If..Else)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehension">
+     1.1.8. List Comprehension
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-and-lambda">
+     1.1.9. Functions and lambda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes-objects">
+   1.2. Classes/Objects
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inheritance">
+     1.2.1. Inheritance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iterators">
+     1.2.2. Iterators
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-concepts">
+   1.3. Class Concepts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.3.1. Inheritance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encapsulation">
+     1.3.2. Encapsulation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polymorphism">
+     1.3.3. Polymorphism
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modules">
+   1.4. Modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regex">
+   1.5. RegEx
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-handling">
+   1.6. File Handling
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -223,37 +343,1035 @@
                 
   <div class="section" id="python">
 <h1><span class="section-number">1. </span>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<p>I am the test file for the book</p>
+<div class="section" id="basics">
+<h2><span class="section-number">1.1. </span>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lists">
+<h3><span class="section-number">1.1.1. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>Methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">append()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">copy()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extend()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverse()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort()</span></code></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demoList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;kiwi&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Adding/Removing items</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demoList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;cherry&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span> 
+
+<span class="n">demoList</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;grape&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;kiwi&#39;, &#39;cherry&#39;]
+[&#39;apple&#39;, &#39;grape&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;kiwi&#39;, &#39;cherry&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>join 2 lists</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thislist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<span class="n">tropical</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;pineapple&quot;</span><span class="p">,</span> <span class="s2">&quot;papaya&quot;</span><span class="p">]</span>
+<span class="n">thislist</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">tropical</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">thislist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;mango&#39;, &#39;pineapple&#39;, &#39;papaya&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>or…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thislist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<span class="n">tropical</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;pineapple&quot;</span><span class="p">,</span> <span class="s2">&quot;papaya&quot;</span><span class="p">]</span>
+
+<span class="n">thislist</span> <span class="o">+</span> <span class="n">tropical</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;mango&#39;, &#39;pineapple&#39;, &#39;papaya&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Removing items</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demoList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">]</span>
+
+<span class="n">demoList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span>
+
+<span class="n">demoList</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">demoList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span>
+
+<span class="n">demoList</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># removes all items</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">demoList</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana&#39;, &#39;orange&#39;, &#39;kiwi&#39;]
+[&#39;banana&#39;, &#39;kiwi&#39;]
+[&#39;kiwi&#39;]
+[]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="copying-a-list">
+<h3><span class="section-number">1.1.2. </span>Copying a list<a class="headerlink" href="#copying-a-list" title="Permalink to this headline">¶</a></h3>
+<p>make sure the lists aren’t linked, with a deep copy</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thislist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<span class="n">mylist</span> <span class="o">=</span> <span class="n">thislist</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">thislist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">thislist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;]
+[&#39;apple&#39;, &#39;cherry&#39;]
+[&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tuples">
+<h3><span class="section-number">1.1.3. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
+<p>unchangeable</p>
+<p><code class="docutils literal notranslate"><span class="pre">count()</span></code> and <code class="docutils literal notranslate"><span class="pre">index()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tupExample</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">tupExample</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sets">
+<h3><span class="section-number">1.1.4. </span>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h3>
+<p>unordered and unindexed, adding/removing is possible but not changing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisset</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">}</span>
+
+<span class="n">thisset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">thisset</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;cherry&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h3><span class="section-number">1.1.5. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruitDict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;colour&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;weight&quot;</span> <span class="p">:</span> <span class="mi">200</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitDict</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitDict</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;type&#39;: &#39;apple&#39;, &#39;colour&#39;: [&#39;red&#39;, &#39;green&#39;], &#39;weight&#39;: 200}
+apple
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruitDict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruitDict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;type&#39;, &#39;colour&#39;, &#39;weight&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruitDict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([&#39;apple&#39;, [&#39;red&#39;, &#39;green&#39;], 200])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruitDict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_items([(&#39;type&#39;, &#39;apple&#39;), (&#39;colour&#39;, [&#39;red&#39;, &#39;green&#39;]), (&#39;weight&#39;, 200)])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Changing, adding, and removing items in a dictionary</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruitDict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;colour&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;weight&quot;</span> <span class="p">:</span> <span class="mi">200</span>
+<span class="p">}</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+<span class="n">fruitDict</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitDict</span><span class="p">)</span>
+
+<span class="n">fruitDict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;smell&quot;</span> <span class="p">:</span> <span class="s2">&quot;appley&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitDict</span><span class="p">)</span>
+
+<span class="n">fruitDict</span><span class="p">[</span><span class="s2">&quot;season&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;summer&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitDict</span><span class="p">[</span><span class="s2">&quot;season&quot;</span><span class="p">])</span>
+
+<span class="k">del</span> <span class="n">fruitDict</span><span class="p">[</span><span class="s2">&quot;colour&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitDict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;type&#39;: &#39;apple&#39;, &#39;colour&#39;: [&#39;red&#39;, &#39;green&#39;], &#39;weight&#39;: 500}
+{&#39;type&#39;: &#39;apple&#39;, &#39;colour&#39;: [&#39;red&#39;, &#39;green&#39;], &#39;weight&#39;: 500, &#39;smell&#39;: &#39;appley&#39;}
+summer
+{&#39;type&#39;: &#39;apple&#39;, &#39;weight&#39;: 500, &#39;smell&#39;: &#39;appley&#39;, &#39;season&#39;: &#39;summer&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="loops">
+<h3><span class="section-number">1.1.6. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>h
-e
-l
-l
-o
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+5
+</pre></div>
+</div>
+</div>
+</div>
+<p>breaks within loops</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">break</span>
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+<p>continue jumps back to the start of the loop</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+5
+6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i is no longer less than 6&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+i is no longer less than 6
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conditions-if-else">
+<h3><span class="section-number">1.1.7. </span>Conditions (If..Else)<a class="headerlink" href="#conditions-if-else" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a is larger&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;they are equal&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b is larger&quot;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b is larger
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">or</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;At least one of the conditions is True&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At least one of the conditions is True
+</pre></div>
+</div>
+</div>
+</div>
+<p>use <code class="docutils literal notranslate"><span class="pre">pass</span></code> to avoid an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-comprehension">
+<h3><span class="section-number">1.1.8. </span>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">newList</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">newList</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;apple&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana&#39;, &#39;cherry&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">newList</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;apple&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana&#39;, &#39;cherry&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">newList</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;APPLE&#39;, &#39;BANANA&#39;, &#39;CHERRY&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions-and-lambda">
+<h3><span class="section-number">1.1.9. </span>Functions and lambda<a class="headerlink" href="#functions-and-lambda" title="Permalink to this headline">¶</a></h3>
+<p>lambda can have only one expression</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printHello</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+
+<span class="n">printHello</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">addTen</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span>  <span class="o">+</span> <span class="mi">10</span>
+
+<span class="n">addTen</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="classes-objects">
+<h2><span class="section-number">1.2. </span>Classes/Objects<a class="headerlink" href="#classes-objects" title="Permalink to this headline">¶</a></h2>
+<p><strong>Classes</strong> are like blueprints for creating objects.</p>
+<p><strong>Instances</strong> are what is built using the class.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function is found in all <strong>classes</strong>. It is used to assign values to object properties, or  other operations when the <em>object is being created</em>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">self</span></code> is used to reference the current instance of the class, and is used to access variables that belong to the class. <em>it doesn’t need to be named self</em></p>
+<p>Classes can contain <strong>methods</strong> (in object functions)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">topspeed</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">topspeed</span> <span class="o">=</span> <span class="n">topspeed</span>
+
+<span class="n">blueCar</span> <span class="o">=</span> <span class="n">car</span><span class="p">(</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;150&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">blueCar</span><span class="o">.</span><span class="n">make</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">blueCar</span><span class="o">.</span><span class="n">topspeed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ford
+150
+</pre></div>
+</div>
+</div>
+</div>
+<p>add a method to the class</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">habitat</span> <span class="o">=</span> <span class="n">habitat</span>
+    
+    <span class="k">def</span> <span class="nf">sayHello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello I am a &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        
+<span class="n">tiger</span> <span class="o">=</span>  <span class="n">animal</span><span class="p">(</span><span class="s2">&quot;tiger&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;forest&quot;</span><span class="p">)</span>
+
+<span class="n">tiger</span><span class="o">.</span><span class="n">sayHello</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello I am a tiger
+</pre></div>
+</div>
+</div>
+</div>
+<p>modifying object parameters is similar to normal python sytax</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tiger</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="mi">220</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tiger</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">tiger</span><span class="o">.</span><span class="n">habitat</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tiger</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span> <span class="c1"># quick investigation</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>220
+{&#39;name&#39;: &#39;tiger&#39;, &#39;weight&#39;: 220}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inheritance">
+<h3><span class="section-number">1.2.1. </span>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
+<p>Inheritance allows us to define a class that inherits methods and properties from another class.</p>
+<p><strong>parent</strong> and <strong>child</strong> classes will be used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parent class</span>
+
+<span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">habitat</span> <span class="o">=</span> <span class="n">habitat</span>
+    
+    <span class="k">def</span> <span class="nf">sayHello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello I am a &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        
+<span class="c1"># Child class</span>
+
+<span class="k">class</span> <span class="nc">fish</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">pass</span> <span class="c1"># used for empty classes</span>
+
+<span class="n">shark</span> <span class="o">=</span> <span class="n">fish</span><span class="p">(</span><span class="s2">&quot;Great White&quot;</span><span class="p">,</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span> <span class="s2">&quot;tropical ocean&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">shark</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Great White
+</pre></div>
+</div>
+</div>
+</div>
+<p>if we were to add the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function, the child overrides that of the parents class.</p>
+<p>To keep it, add a call to the parents <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> directly or use <code class="docutils literal notranslate"><span class="pre">super()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">habitat</span> <span class="o">=</span> <span class="n">habitat</span>
+
+
+<span class="c1"># explicitly calling</span>
+<span class="k">class</span> <span class="nc">bird</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">):</span>
+        <span class="n">animal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">)</span>
+
+        
+<span class="c1"># using super()</span>
+<span class="k">class</span> <span class="nc">mammal</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">)</span>
+
+        
+        
+<span class="n">eagle</span> <span class="o">=</span> <span class="n">bird</span><span class="p">(</span><span class="s2">&quot;Golden&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;mountains&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eagle</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+
+<span class="n">bear</span> <span class="o">=</span> <span class="n">mammal</span><span class="p">(</span><span class="s2">&quot;Grizzly&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;forest&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bear</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Golden&#39;, &#39;weight&#39;: 2, &#39;habitat&#39;: &#39;mountains&#39;}
+{&#39;name&#39;: &#39;Grizzly&#39;, &#39;weight&#39;: 500, &#39;habitat&#39;: &#39;forest&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>properties can also be added at the inheritance stage</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">habitat</span> <span class="o">=</span> <span class="n">habitat</span>
+
+        
+<span class="k">class</span> <span class="nc">insect</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">colonySize</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">habitat</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colonySize</span> <span class="o">=</span> <span class="n">colonySize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exoskeleton</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># you can also add properties that aren&#39;t assigned</span>
+    
+    <span class="k">def</span> <span class="nf">printColonySize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot; has a colony size of &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colonySize</span><span class="p">)</span>
+
+        
+        
+<span class="n">ant</span> <span class="o">=</span> <span class="n">insect</span><span class="p">(</span><span class="s2">&quot;fire ant&quot;</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s2">&quot;tropical forest&quot;</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+
+<span class="n">ant</span><span class="o">.</span><span class="n">printColonySize</span><span class="p">()</span>
+
+<span class="n">ant</span><span class="o">.</span><span class="vm">__dict__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The  fire ant  has a colony size of  100000
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;fire ant&#39;,
+ &#39;weight&#39;: 0.001,
+ &#39;habitat&#39;: &#39;tropical forest&#39;,
+ &#39;colonySize&#39;: 100000,
+ &#39;exoskeleton&#39;: True}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterators">
+<h3><span class="section-number">1.2.2. </span>Iterators<a class="headerlink" href="#iterators" title="Permalink to this headline">¶</a></h3>
+<p>Is an object that can be iterated upon.</p>
+<p>Specifically consitsting of the metods <code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__next__()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> - returns the iterator object</p>
+<p><code class="docutils literal notranslate"><span class="pre">__next__()</span></code> - returns the next item in the sequence</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">numbers</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">myclass</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">()</span>
+<span class="n">myiter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">myclass</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">myiter</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">myiter</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">myiter</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+</pre></div>
+</div>
+</div>
+</div>
+<p>to stop the iteration use <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">numbers</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">x</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span>
+
+<span class="n">myclass</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">()</span>
+<span class="n">myiter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">myclass</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">myiter</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="class-concepts">
+<h2><span class="section-number">1.3. </span>Class Concepts<a class="headerlink" href="#class-concepts" title="Permalink to this headline">¶</a></h2>
+<p>classes have a number of key concepts</p>
+<ul class="simple">
+<li><p>inheritance - creating a new class from a parent</p></li>
+<li><p>encapsulation - being unable to effect the core data, unless a function specifices this</p></li>
+<li><p>Polymorphism - to use a common interface for multiple forms</p></li>
+</ul>
+<div class="section" id="id1">
+<h3><span class="section-number">1.3.1. </span>Inheritance<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parent class</span>
+<span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">habitat</span> <span class="o">=</span> <span class="n">habitat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;I am a &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span>
+
+    <span class="k">def</span> <span class="nf">sayHelloSpecies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello I am a &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+
+<span class="c1"># child class</span>
+<span class="k">class</span> <span class="nc">fish</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fishSpeak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bubble bubble bubble&quot;</span><span class="p">)</span>
+        
+        
+        
+        
+<span class="n">skate</span> <span class="o">=</span> <span class="n">fish</span><span class="p">(</span><span class="s2">&quot;skate&quot;</span><span class="p">,</span> <span class="s2">&quot;north sea&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">skate</span><span class="o">.</span><span class="n">sayHelloSpecies</span><span class="p">()</span>
+<span class="n">skate</span><span class="o">.</span><span class="n">fishSpeak</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">skate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello I am a skate
+bubble bubble bubble
+I am a skate
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="encapsulation">
+<h3><span class="section-number">1.3.2. </span>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">¶</a></h3>
+<p>note how the <code class="docutils literal notranslate"><span class="pre">__maxprice</span></code> cannot be changed without the use of the specificed function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Computer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="mi">900</span>
+
+    <span class="k">def</span> <span class="nf">sell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;selling at price </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">setMaxPrice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="n">price</span>
+
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Computer</span><span class="p">()</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+
+<span class="c1"># change the price - doesn&#39;t work! good</span>
+<span class="n">c</span><span class="o">.</span><span class="n">__maxprice</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+
+<span class="c1"># using setter function - works</span>
+<span class="n">c</span><span class="o">.</span><span class="n">setMaxPrice</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">sell</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>selling at price 900
+selling at price 900
+selling at price 1000
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="polymorphism">
+<h3><span class="section-number">1.3.3. </span>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline">¶</a></h3>
+<p>We can have multiple common classes, that can be used by other functions/class/etc.</p>
+<p>the <code class="docutils literal notranslate"><span class="pre">flying_test()</span></code> function uses the <code class="docutils literal notranslate"><span class="pre">fly()</span></code> method in both the parrot and emu classes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># parent</span>
+<span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">habitat</span> <span class="o">=</span> <span class="n">habitat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+
+
+<span class="k">class</span> <span class="nc">parrot</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;can fly&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">emu</span><span class="p">(</span><span class="n">animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">species</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cannot fly&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># define a common test</span>
+<span class="k">def</span> <span class="nf">flying_test</span><span class="p">(</span><span class="n">birdSpecies</span><span class="p">):</span>
+    <span class="n">birdSpecies</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+
+
+<span class="c1"># create object and run tests</span>
+<span class="n">polly</span> <span class="o">=</span> <span class="n">parrot</span><span class="p">(</span><span class="s2">&quot;parrot&quot;</span><span class="p">,</span> <span class="s2">&quot;tropics&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">paul</span> <span class="o">=</span> <span class="n">emu</span><span class="p">(</span><span class="s2">&quot;emu&quot;</span><span class="p">,</span> <span class="s2">&quot;tropics&quot;</span><span class="p">,</span> <span class="mi">67</span><span class="p">)</span>
+<span class="n">flying_test</span><span class="p">(</span><span class="n">polly</span><span class="p">)</span>
+<span class="n">flying_test</span><span class="p">(</span><span class="n">paul</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>can fly
+cannot fly
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modules">
+<h2><span class="section-number">1.4. </span>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<p>Code library or a local <code class="docutils literal notranslate"><span class="pre">.py</span></code> file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span> <span class="k">as</span> <span class="n">df</span>
+
+<span class="n">df</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="regex">
+<h2><span class="section-number">1.5. </span>RegEx<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">re</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">re.</span></code> methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">findall</span></code> - Returns a list containing all matches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">search</span></code> - Returns a Match object if there is a match anywhere in the string</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">.span()</span></code> - returns a tuple containing the start and end positions of the match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.string</span></code> - returns the string passed into the function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.group()</span></code> - returns the part of the string where there was a match</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">split</span></code> - Returns a list where the string has been split at each match</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub</span></code> - Replaces one or many matches with a string</p></li>
+</ul>
+<p><em>from w3</em></p>
+</div>
+<div class="section" id="file-handling">
+<h2><span class="section-number">1.6. </span>File Handling<a class="headerlink" href="#file-handling" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">open(filename,</span> <span class="pre">mode)</span></code></p>
+<p>Mode types:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> - read</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> - append</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> - write</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code> - create</p>
+<p>open, readlines,and close</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;demofile.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> 
+</pre></div>
+</div>
+<p>https://www.w3schools.com/python/numpy_intro.asp</p>
 </div>
 </div>
 

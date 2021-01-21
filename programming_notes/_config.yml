@@ -9,3 +9,5 @@ title                       : Programming Notes  # The title of the book. Will b
 author                      : Jacob Brown  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : img/gandalf.jpg  # A path to the book logo
+execute:
+  execute_notebooks         : off  # removal causes multi-line output issues with stderr and stdout

@@ -8,6 +8,8 @@
   - file: python
   - file: shell
     title: Shell # added as title doesn't always show with notebooks
+  - file: rlang
+    title: R
 
 - part: Appendix
   chapters:

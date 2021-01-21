@@ -6,9 +6,9 @@
 - part: Language specific
   chapters:
   - file: python_basic
-    title: Python Basics
+    title: "Python: Basics"
   - file: python_advanced
-    title: Python Basics
+    title: "Python: Advanced"
   - file: shell
     title: Shell # added as title doesn't always show with notebooks
   - file: rlang

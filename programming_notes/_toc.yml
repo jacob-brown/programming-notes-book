@@ -9,6 +9,10 @@
     title: "Python: Basics"
   - file: python_advanced
     title: "Python: Advanced"
+  - file: python_numpy_pandas
+    title: "Python: Numpy and Pandas"
+  - file: cpp
+    title: "C++"
   - file: shell
     title: Shell # added as title doesn't always show with notebooks
   - file: rlang

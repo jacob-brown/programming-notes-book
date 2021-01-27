@@ -1,6 +1,6 @@
 # Python: Basics
 
-### Lists
+## Lists
 Methods: 
 
 * `append()`
@@ -57,7 +57,7 @@ print(demoList)
 demoList.clear() # removes all items
 print(demoList)
 
-### Copying a list
+## Copying a list
 make sure the lists aren't linked, with a deep copy
 
 thislist = ["apple", "banana", "cherry"]
@@ -68,7 +68,7 @@ del thislist[1]
 print(thislist)
 print(mylist)
 
-### Tuples
+## Tuples
 
 unchangeable
 
@@ -78,7 +78,7 @@ unchangeable
 tupExample = (1, 2, 3)
 tupExample
 
-### Sets
+## Sets
 unordered and unindexed, adding/removing is possible but not changing
 
 
@@ -90,7 +90,7 @@ thisset.add("orange")
 
 print(thisset) 
 
-### Dictionaries
+## Dictionaries
 
 fruitDict = {
     "type" : "apple",
@@ -226,6 +226,45 @@ addTen(2)
 x = lambda a, b : a * b
 print(x(5, 6)) 
 
+## Key Concepts of Functions
+
+**Parameter** - varriable listed *when defining* the function
+
+**Argument** (args)- value that is sent to the function. Passes into a list
+
+**Keyword Argument** (kwargs) - arguments wth a *key = value* syntax. Passes into a dict
+
+```{python}
+def add(a, b): # a and b are parameters
+    return a+ b
+    
+add(1, 2) # 1 and 2 are arguments
+
+
+add(a = 1, b = 2) # both are keyword arguments
+
+```
+
+N.B. positional arguments are those not defined with a keyword
+
+
+If we do not know how many positional arguments to pass use `*`
+
+def tupleOfNumbers(*numbers):
+    return numbers
+
+tupleOfNumbers(1, 2, 3, 4, 5, 6)
+
+
+If we do not know how many keyword arguments to pass use `**`
+
+def makePerson(**infoOnPerson):
+        for key, value in infoOnPerson.items():
+            print("{} is {}".format(key,value))
+
+jacob = makePerson(first = "jacob", last = "brown", Age = 26)
+
+
 ## Modules
 Code library or a local `.py` file
 
@@ -275,6 +314,3 @@ print(f.readline())
 f.close() 
 ```
 
-
-
-https://www.w3schools.com/python/numpy_intro.asp

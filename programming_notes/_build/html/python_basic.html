@@ -111,13 +111,23 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="python_numpy_pandas.html">
+   3. Python: Numpy and Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cpp.html">
+   4. C++
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="shell.html">
-   3. Shell
+   5. Shell
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rlang.html">
-   4. R
+   6. R
   </a>
  </li>
 </ul>
@@ -275,18 +285,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-concepts-of-functions">
+   1.10. Key Concepts of Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modules">
-   1.10. Modules
+   1.11. Modules
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#regex">
-   1.11. RegEx
+   1.12. RegEx
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-handling">
-   1.12. File Handling
+   1.13. File Handling
   </a>
  </li>
 </ul>
@@ -466,7 +481,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;orange&#39;, &#39;banana&#39;, &#39;cherry&#39;, &#39;apple&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;apple&#39;, &#39;orange&#39;, &#39;banana&#39;, &#39;cherry&#39;}
 </pre></div>
 </div>
 </div>
@@ -824,8 +839,50 @@ i is no longer less than 6
 </div>
 </div>
 </div>
+<div class="section" id="key-concepts-of-functions">
+<h2><span class="section-number">1.10. </span>Key Concepts of Functions<a class="headerlink" href="#key-concepts-of-functions" title="Permalink to this headline">¶</a></h2>
+<p><strong>Parameter</strong> - varriable listed <em>when defining</em> the function</p>
+<p><strong>Argument</strong> (args)- value that is sent to the function. Passes into a list</p>
+<p><strong>Keyword Argument</strong> (kwargs) - arguments wth a <em>key = value</em> syntax. Passes into a dict</p>
+<p>N.B. positional arguments are those not defined with a keyword</p>
+<p>If we do not know how many positional arguments to pass use <code class="docutils literal notranslate"><span class="pre">*</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tupleOfNumbers</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">numbers</span>
+
+<span class="n">tupleOfNumbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3, 4, 5, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we do not know how many keyword arguments to pass use <code class="docutils literal notranslate"><span class="pre">**</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">makePerson</span><span class="p">(</span><span class="o">**</span><span class="n">infoOnPerson</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">infoOnPerson</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">))</span>
+
+<span class="n">jacob</span> <span class="o">=</span> <span class="n">makePerson</span><span class="p">(</span><span class="n">first</span> <span class="o">=</span> <span class="s2">&quot;jacob&quot;</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="n">Age</span> <span class="o">=</span> <span class="mi">26</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first is jacob
+last is brown
+Age is 26
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="modules">
-<h2><span class="section-number">1.10. </span>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.11. </span>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
 <p>Code library or a local <code class="docutils literal notranslate"><span class="pre">.py</span></code> file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -890,7 +947,7 @@ i is no longer less than 6
 </div>
 </div>
 <div class="section" id="regex">
-<h2><span class="section-number">1.11. </span>RegEx<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.12. </span>RegEx<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">re</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">re.</span></code> methods:</p>
 <ul class="simple">
@@ -908,7 +965,7 @@ i is no longer less than 6
 <p><em>from w3</em></p>
 </div>
 <div class="section" id="file-handling">
-<h2><span class="section-number">1.12. </span>File Handling<a class="headerlink" href="#file-handling" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.13. </span>File Handling<a class="headerlink" href="#file-handling" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">open(filename,</span> <span class="pre">mode)</span></code></p>
 <p>Mode types:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> - read</p>
@@ -921,7 +978,6 @@ i is no longer less than 6
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> 
 </pre></div>
 </div>
-<p>https://www.w3schools.com/python/numpy_intro.asp</p>
 </div>
 </div>
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Shell &#8212; Programming Notes</title>
+    <title>5. Shell &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. R" href="rlang.html" />
-    <link rel="prev" title="2. Python: Advanced" href="python_advanced.html" />
+    <link rel="next" title="6. R" href="rlang.html" />
+    <link rel="prev" title="4. C++" href="cpp.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -110,14 +110,24 @@
    2. Python: Advanced
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_numpy_pandas.html">
+   3. Python: Numpy and Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cpp.html">
+   4. C++
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Shell
+   5. Shell
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rlang.html">
-   4. R
+   6. R
   </a>
  </li>
 </ul>
@@ -224,6 +234,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#size-of-files-folders">
+   5.1. Size of files/folders
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -232,42 +256,33 @@
               <div>
                 
   <div class="section" id="shell">
-<h1><span class="section-number">3. </span>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h1>
+<p>zsh use</p>
+<p>set directory for use</p>
+<div class="section" id="size-of-files-folders">
+<h2><span class="section-number">5.1. </span>Size of files/folders<a class="headerlink" href="#size-of-files-folders" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>du -sh *
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jacobbrown/Documents/Productivity/notes_Jupyter/mynotesbook/programming_notes/programming_notes
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.4M	_build
+4.0K	_config.yml
+4.0K	_toc.yml
+4.0K	content.md
+ 48K	img
+4.0K	intro.md
+4.0K	markdown.md
+4.0K	notebooks.ipynb
+ 24K	python_advanced.ipynb
+ 20K	python_basic.ipynb
+8.0K	references.bib
+4.0K	rlang.ipynb
+4.0K	shell.ipynb
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls -al
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 80
-drwxr-xr-x  14 jacobbrown  staff   448 Jan 18 16:45 <span class=" -Color -Color-Bold -Color-Bold-Cyan">.</span>
-drwxr-xr-x   9 jacobbrown  staff   288 Jan 18 15:22 <span class=" -Color -Color-Bold -Color-Bold-Cyan">..</span>
-drwxr-xr-x   2 jacobbrown  staff    64 Jan 18 16:45 <span class=" -Color -Color-Bold -Color-Bold-Cyan">.ipynb_checkpoints</span>
-drwxr-xr-x   5 jacobbrown  staff   160 Jan 18 14:18 <span class=" -Color -Color-Bold -Color-Bold-Cyan">_build</span>
--rwxr-xr-x   1 jacobbrown  staff   692 Jan 18 15:24 <span class=" -Color -Color-Red">_config.yml</span>
--rw-r--r--   1 jacobbrown  staff   269 Jan 18 16:09 _toc.yml
--rw-r--r--   1 jacobbrown  staff   414 Jan 18 15:44 content.md
-drwxr-xr-x   4 jacobbrown  staff   128 Jan 18 15:24 <span class=" -Color -Color-Bold -Color-Bold-Cyan">img</span>
--rw-r--r--   1 jacobbrown  staff   161 Jan 18 15:27 intro.md
--rw-r--r--   1 jacobbrown  staff  3736 Jan 18 14:16 markdown.md
--rw-r--r--   1 jacobbrown  staff  3373 Jan 18 16:26 notebooks.ipynb
--rw-r--r--   1 jacobbrown  staff  1680 Jan 18 15:18 python.ipynb
--rw-r--r--   1 jacobbrown  staff  5451 Jan 18 14:16 references.bib
--rw-r--r--   1 jacobbrown  staff  1631 Jan 18 16:24 shell.ipynb
-</pre></div>
 </div>
 </div>
 </div>
@@ -301,8 +316,8 @@ drwxr-xr-x   4 jacobbrown  staff   128 Jan 18 15:24 <span class=" -Color -Color-
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python_advanced.html" title="previous page"><span class="section-number">2. </span>Python: Advanced</a>
-    <a class='right-next' id="next-link" href="rlang.html" title="next page"><span class="section-number">4. </span>R</a>
+    <a class='left-prev' id="prev-link" href="cpp.html" title="previous page"><span class="section-number">4. </span>C++</a>
+    <a class='right-next' id="next-link" href="rlang.html" title="next page"><span class="section-number">6. </span>R</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

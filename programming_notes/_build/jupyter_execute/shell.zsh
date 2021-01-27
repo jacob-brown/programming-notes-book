@@ -1,5 +1,9 @@
 # Shell
+zsh use
 
-pwd
+set directory for use
 
-ls -al
+## Size of files/folders
+
+du -sh *
+

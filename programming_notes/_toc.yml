@@ -21,6 +21,8 @@
   chapters:
   - file: ml_the_basics
     title: "The Basics"
+  - file: ml_basic_text
+    title: "Basic Text Classification"
 
 - part: Appendix
   chapters:

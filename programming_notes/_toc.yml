@@ -19,7 +19,7 @@
     title: R
 - part: Machine Learning
   chapters:
-  - file: ml_basics
+  - file: ml_the_basics
     title: "The Basics"
 
 - part: Appendix

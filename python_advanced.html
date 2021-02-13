@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Python: Advanced &#8212; Programming Notes</title>
+    <title>3. Python: Advanced &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Python: Numpy and Pandas" href="python_numpy_pandas.html" />
-    <link rel="prev" title="1. Python: Basics" href="python_basic.html" />
+    <link rel="next" title="4. C++" href="cpp.html" />
+    <link rel="prev" title="2. Python: Numpy and Pandas" href="python_numpy_pandas.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -105,14 +105,14 @@
    1. Python: Basics
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Python: Advanced
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python_numpy_pandas.html">
-   3. Python: Numpy and Pandas
+   2. Python: Numpy and Pandas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Python: Advanced
   </a>
  </li>
  <li class="toctree-l1">
@@ -128,6 +128,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="rlang.html">
    6. R
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ml_basics.html">
+   1. The Basics
   </a>
  </li>
 </ul>
@@ -241,61 +253,125 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classes">
-   2.1. Classes
+   3.1. Classes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribute-visibility">
+     3.1.1. Attribute Visibility
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inheritance">
-     2.1.1. Inheritance
+     3.1.2. Inheritance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#super-extended">
+     3.1.3. Super - Extended
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-inheritance">
+     3.1.4. Multiple inheritance
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterators">
-     2.1.2. Iterators
+     3.1.5. Iterators
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-concepts">
-   2.2. Class Concepts
+   3.2. Class Concepts
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     2.2.1. Inheritance
+     3.2.1. Inheritance
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#encapsulation">
-     2.2.2. Encapsulation
+     3.2.2. Encapsulation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#polymorphism">
-     2.2.3. Polymorphism
+     3.2.3. Polymorphism
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#custom-iterators">
-   2.3. Custom iterators
+   3.3. Custom iterators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generators">
-   2.4. Generators
+   3.4. Generators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#closure">
-   2.5. Closure
+   3.5. Closure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#decorators">
-   2.6. Decorators
+   3.6. Decorators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getters-setters-and-property">
+   3.7. Getters, setters, and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     property
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#property">
+     3.7.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       @property
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instant-class-and-static-methods">
+   3.8. Instant, Class, and Static Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class-methods-when-to-use">
+     3.8.1. Class methods: when to use
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#static-methods-when-to-use">
+     3.8.2. Static methods: when to use
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magic-methods">
+   3.9. Magic Methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   3.10.
   </a>
  </li>
 </ul>
@@ -310,9 +386,9 @@
               <div>
                 
   <div class="section" id="python-advanced">
-<h1><span class="section-number">2. </span>Python: Advanced<a class="headerlink" href="#python-advanced" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Python: Advanced<a class="headerlink" href="#python-advanced" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="classes">
-<h2><span class="section-number">2.1. </span>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Classes</strong> are like blueprints for creating objects.</p>
 <p><strong>Instances</strong> are what is built using the class.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> function is found in all <strong>classes</strong>. It is used to assign values to object properties, or  other operations when the <em>object is being created</em>.</p>
@@ -382,8 +458,36 @@
 </div>
 </div>
 </div>
+<div class="section" id="attribute-visibility">
+<h3><span class="section-number">3.1.1. </span>Attribute Visibility<a class="headerlink" href="#attribute-visibility" title="Permalink to this headline">¶</a></h3>
+<p>public - <strong>no change</strong></p>
+<p>protected - <strong>1 underscore prefix</strong></p>
+<p>private - <strong>2 underscore prefix</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">employee</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">bonus</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span> <span class="c1"># public</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_salary</span> <span class="o">=</span> <span class="n">salary</span> <span class="c1"># protected</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__bonus</span> <span class="o">=</span> <span class="n">bonus</span> <span class="c1"># private</span>
+        
+<span class="n">jacob</span> <span class="o">=</span> <span class="n">employee</span><span class="p">(</span><span class="s2">&quot;jacob&quot;</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jacob</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jacob</span><span class="o">.</span><span class="n">_salary</span><span class="p">)</span>
+<span class="c1">#print(jacob.__bonus) # would return an error</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>jacob
+30000
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="inheritance">
-<h3><span class="section-number">2.1.1. </span>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.2. </span>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
 <p>Inheritance allows us to define a class that inherits methods and properties from another class.</p>
 <p><strong>parent</strong> and <strong>child</strong> classes will be used.</p>
 <div class="cell docutils container">
@@ -499,8 +603,201 @@
 </div>
 </div>
 </div>
+<div class="section" id="super-extended">
+<h3><span class="section-number">3.1.3. </span>Super - Extended<a class="headerlink" href="#super-extended" title="Permalink to this headline">¶</a></h3>
+<p>from - https://realpython.com/python-super/#what-can-super-do-for-you</p>
+<p><code class="docutils literal notranslate"><span class="pre">super(Square,</span> <span class="pre">self).__init__()</span></code>
+the first element should be the same name as the <strong>new class</strong></p>
+<p>calling methods using super: <code class="docutils literal notranslate"><span class="pre">super().area()</span></code></p>
+<p>imagine that we don’t want to inherite a method eg. a cube should not be able to use <code class="docutils literal notranslate"><span class="pre">area()</span></code> outside of the class.</p>
+<p>In this instance we should <strong>modify</strong> the method by using the same name</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># superclass - parent</span>
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+
+
+<span class="c1"># subclass - child</span>
+<span class="k">class</span> <span class="nc">Square</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Square</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Cube</span><span class="p">(</span><span class="n">Square</span><span class="p">):</span>
+    <span class="c1"># modify an existing method</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">face_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>  <span class="c1"># using the area() method</span>
+        <span class="k">return</span> <span class="n">face_area</span> <span class="o">*</span> <span class="mi">6</span>
+
+    <span class="c1"># add a new method</span>
+    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">face_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">face_area</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;square&quot;</span><span class="p">)</span>
+<span class="n">squareObj</span> <span class="o">=</span> <span class="n">Square</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squareObj</span><span class="o">.</span><span class="n">area</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cube&quot;</span><span class="p">)</span>
+<span class="n">cubeObj</span> <span class="o">=</span> <span class="n">Cube</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cubeObj</span><span class="o">.</span><span class="n">area</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>square
+16
+cube
+96
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-inheritance">
+<h3><span class="section-number">3.1.4. </span>Multiple inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
+<p>We must be careful when inheriting from multiple classes.</p>
+<p>For example, the below <em>will return an error</em></p>
+<p><strong>Method Resolution Order</strong> - is the order in which the methods are called.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__mro__</span></code> - provides info on the order</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Triangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+
+<span class="c1"># inherit from 2 classes</span>
+<span class="k">class</span> <span class="nc">RightPyramid</span><span class="p">(</span><span class="n">Triangle</span><span class="p">,</span> <span class="n">Square</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">slant_height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slant_height</span> <span class="o">=</span> <span class="n">slant_height</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">base_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">area</span>
+        <span class="n">perimeter</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">perimeter</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">perimeter</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">slant_height</span> <span class="o">+</span> <span class="n">base_area</span>
+
+<span class="n">pyramid</span> <span class="o">=</span> <span class="n">RightPyramid</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="c1"># pyramid.area() # returns an error</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># method resolution order</span>
+<span class="n">RightPyramid</span><span class="o">.</span><span class="vm">__mro__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(__main__.RightPyramid,
+ __main__.Triangle,
+ __main__.Square,
+ __main__.Rectangle,
+ object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>note how the order is RightPyramid, Triangle, Square</p>
+<p>We want to switch the order of Triangle and Square</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RightPyramidAlt</span><span class="p">(</span><span class="n">Square</span><span class="p">,</span> <span class="n">Triangle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">slant_height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slant_height</span> <span class="o">=</span> <span class="n">slant_height</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">base_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">area</span>
+        <span class="n">perimeter</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">perimeter</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">perimeter</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">slant_height</span> <span class="o">+</span> <span class="n">base_area</span>
+
+<span class="n">RightPyramidAlt</span><span class="o">.</span><span class="vm">__mro__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(__main__.RightPyramidAlt,
+ __main__.Square,
+ __main__.Rectangle,
+ __main__.Triangle,
+ object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are still some issues though:</p>
+<ol class="simple">
+<li><p>two separate classes with the same method name and signature i.e. we are inheriting the <code class="docutils literal notranslate"><span class="pre">area()</span></code> method from Square and Triange</p></li>
+<li><p>the new class doesn’t distinguish between Triange and Square objects very well. i.e. they don’t reference their superclass</p></li>
+</ol>
+<p>Issue 1 resolution: name the method <code class="docutils literal notranslate"><span class="pre">area()</span></code> differently eg. <code class="docutils literal notranslate"><span class="pre">squ_area</span></code> and <code class="docutils literal notranslate"><span class="pre">tri_area</span></code></p>
+<p>Issue 2 resolution:</p>
+<ul class="simple">
+<li><p>add <code class="docutils literal notranslate"><span class="pre">super().__init__()</span></code> to the <code class="docutils literal notranslate"><span class="pre">.__init__()</span></code> in Rectange and Trainge</p></li>
+<li><p>allow <code class="docutils literal notranslate"><span class="pre">.__init__()</span></code> to take keyword dictionary</p></li>
+</ul>
+<p>Alternatively, we could define a new class</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+
+
+<span class="k">class</span> <span class="nc">Square</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+
+
+<span class="c1"># the new volume superclass</span>
+<span class="k">class</span> <span class="nc">Volume</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="p">()</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+
+<span class="c1"># subclass</span>
+<span class="k">class</span> <span class="nc">Cube</span><span class="p">(</span><span class="n">Volume</span><span class="p">,</span> <span class="n">Square</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">length</span>
+
+
+<span class="n">cube</span> <span class="o">=</span> <span class="n">Cube</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="o">.</span><span class="n">volume</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="iterators">
-<h3><span class="section-number">2.1.2. </span>Iterators<a class="headerlink" href="#iterators" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.5. </span>Iterators<a class="headerlink" href="#iterators" title="Permalink to this headline">¶</a></h3>
 <p>Is an object that can be iterated upon.</p>
 <p>Specifically consitsting of the metods <code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__next__()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> - returns the iterator object</p>
@@ -575,7 +872,7 @@
 </div>
 </div>
 <div class="section" id="class-concepts">
-<h2><span class="section-number">2.2. </span>Class Concepts<a class="headerlink" href="#class-concepts" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Class Concepts<a class="headerlink" href="#class-concepts" title="Permalink to this headline">¶</a></h2>
 <p>classes have a number of key concepts</p>
 <ul class="simple">
 <li><p>inheritance - creating a new class from a parent</p></li>
@@ -583,7 +880,7 @@
 <li><p>Polymorphism - to use a common interface for multiple forms</p></li>
 </ul>
 <div class="section" id="id1">
-<h3><span class="section-number">2.2.1. </span>Inheritance<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.1. </span>Inheritance<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parent class</span>
@@ -627,8 +924,8 @@ I am a skate
 </div>
 </div>
 <div class="section" id="encapsulation">
-<h3><span class="section-number">2.2.2. </span>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">¶</a></h3>
-<p>note how the <code class="docutils literal notranslate"><span class="pre">__maxprice</span></code> cannot be changed without the use of the specificed function.</p>
+<h3><span class="section-number">3.2.2. </span>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">¶</a></h3>
+<p>note how the <code class="docutils literal notranslate"><span class="pre">__maxprice</span></code> cannot be changed without the use of the specificed function as it is a <em>private attribute</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Computer</span><span class="p">:</span>
@@ -666,7 +963,7 @@ selling at price 1000
 </div>
 </div>
 <div class="section" id="polymorphism">
-<h3><span class="section-number">2.2.3. </span>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.3. </span>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline">¶</a></h3>
 <p>We can have multiple common classes, that can be used by other functions/class/etc.</p>
 <p>the <code class="docutils literal notranslate"><span class="pre">flying_test()</span></code> function uses the <code class="docutils literal notranslate"><span class="pre">fly()</span></code> method in both the parrot and emu classes.</p>
 <div class="cell docutils container">
@@ -718,7 +1015,7 @@ cannot fly
 </div>
 </div>
 <div class="section" id="custom-iterators">
-<h2><span class="section-number">2.3. </span>Custom iterators<a class="headerlink" href="#custom-iterators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Custom iterators<a class="headerlink" href="#custom-iterators" title="Permalink to this headline">¶</a></h2>
 <p>uses <code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__next__()</span></code> methods</p>
 <p><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> - returns the iterator object</p>
 <p><code class="docutils literal notranslate"><span class="pre">__next__()</span></code> - returns the next item in the sequence
@@ -758,7 +1055,7 @@ it also requires use of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="generators">
-<h2><span class="section-number">2.4. </span>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
 <p>Are a simple way of creating iterations</p>
 <p><code class="docutils literal notranslate"><span class="pre">yield</span></code> is used at least once in a function. It has the same effect as the <code class="docutils literal notranslate"><span class="pre">return</span></code> function, but pauses the functions state, allowing it to be iterable.</p>
 <p><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__next__()</span></code> methods are automatically initiated</p>
@@ -808,7 +1105,7 @@ it also requires use of <code class="docutils literal notranslate"><span class="
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 4, 8]
-&lt;generator object &lt;genexpr&gt; at 0x105660cf0&gt;
+&lt;generator object &lt;genexpr&gt; at 0x102e48970&gt;
 1
 2
 4
@@ -819,7 +1116,7 @@ it also requires use of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="closure">
-<h2><span class="section-number">2.5. </span>Closure<a class="headerlink" href="#closure" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Closure<a class="headerlink" href="#closure" title="Permalink to this headline">¶</a></h2>
 <p>if a function has a <em>nested</em> function with a value that must be <em>referenced in the enclosed function</em> then closure should be used.</p>
 <p>It is the concept of returning the nested function</p>
 <div class="cell docutils container">
@@ -847,7 +1144,7 @@ it also requires use of <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="decorators">
-<h2><span class="section-number">2.6. </span>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h2>
 <p>adds functionallity to existing code - <em>metacoding</em></p>
 <p>decorators act as a wrapper</p>
 <p>Divider example, we are aiming to add functionality to:</p>
@@ -938,6 +1235,341 @@ Hello I am a banner
 </div>
 </div>
 </div>
+<div class="section" id="getters-setters-and-property">
+<h2><span class="section-number">3.7. </span>Getters, setters, and <code class="docutils literal notranslate"><span class="pre">property</span></code><a class="headerlink" href="#getters-setters-and-property" title="Permalink to this headline">¶</a></h2>
+<p>When using getters and setters it is important to ensure we have backwards compatibility.</p>
+<p>For example, assume we want to convert the below use getters and setters</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+
+<span class="n">bear</span> <span class="o">=</span> <span class="n">animal</span><span class="p">(</span><span class="s2">&quot;panda&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bear</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>panda
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setSpecies</span><span class="p">(</span><span class="n">species</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">setSpecies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valueSpecies</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__species</span> <span class="o">=</span> <span class="n">valueSpecies</span> <span class="c1"># note the attribute is private</span>
+    
+    <span class="k">def</span> <span class="nf">getSpecies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__species</span>
+
+<span class="n">bear</span> <span class="o">=</span> <span class="n">animal</span><span class="p">(</span><span class="s2">&quot;panda&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bear</span><span class="o">.</span><span class="n">getSpecies</span><span class="p">())</span>
+<span class="n">bear</span><span class="o">.</span><span class="n">setSpecies</span><span class="p">(</span><span class="s2">&quot;grizzly&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bear</span><span class="o">.</span><span class="n">getSpecies</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>panda
+grizzly
+</pre></div>
+</div>
+</div>
+</div>
+<p>So one issue we now face is that <code class="docutils literal notranslate"><span class="pre">bear.species</span></code> has now been replaced with <code class="docutils literal notranslate"><span class="pre">bear.getSpecies()</span></code></p>
+<p>This is not backwards compatible…</p>
+<p>This is where <code class="docutils literal notranslate"><span class="pre">property</span></code> comes in!</p>
+<p><code class="docutils literal notranslate"><span class="pre">property(fget=None,</span> <span class="pre">fset=None,</span> <span class="pre">fdel=None,</span> <span class="pre">doc=None)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">fget</span></code> - get value attribute</p>
+<p><code class="docutils literal notranslate"><span class="pre">fset</span></code> - set value attribute</p>
+<p><code class="docutils literal notranslate"><span class="pre">fdel</span></code> - delete value attribute</p>
+<p><code class="docutils literal notranslate"><span class="pre">doc</span></code> - string value</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setSpecies</span><span class="p">(</span><span class="n">species</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">setSpecies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valueSpecies</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__species</span> <span class="o">=</span> <span class="n">valueSpecies</span> <span class="c1"># note the attribute is private</span>
+    
+    <span class="k">def</span> <span class="nf">getSpecies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__species</span>
+    
+    <span class="c1"># enable backwards compatibility</span>
+    <span class="n">species</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">fget</span><span class="o">=</span><span class="n">getSpecies</span><span class="p">,</span> <span class="n">fset</span><span class="o">=</span><span class="n">setSpecies</span><span class="p">)</span>
+
+<span class="n">bear</span> <span class="o">=</span> <span class="n">animal</span><span class="p">(</span><span class="s2">&quot;panda&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bear</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+<span class="n">bear</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="s2">&quot;grizzly&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bear</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>panda
+grizzly
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="property">
+<h3><span class="section-number">3.7.1. </span><code class="docutils literal notranslate"><span class="pre">&#64;property</span></code><a class="headerlink" href="#property" title="Permalink to this headline">¶</a></h3>
+<p>A more pythonic way, is to use the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code>  decorator.</p>
+<p>Which has:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">getter</span> <span class="pre">(fget)</span></code> - this is the default with &#64;property</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setter</span> <span class="pre">(fset)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleter</span> <span class="pre">(fdel)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mro</span></code></p></li>
+</ul>
+<p>When using the same name eg. <code class="docutils literal notranslate"><span class="pre">species</span></code> it is important that the visability is <strong>private</strong> or <strong>protected</strong></p>
+<p>N.B. how <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> is used for establising and getting and <code class="docutils literal notranslate"><span class="pre">&#64;funcName.setter</span></code>/<code class="docutils literal notranslate"><span class="pre">&#64;funcName.deleter</span></code> are used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span> 
+        
+    <span class="nd">@property</span> 
+    <span class="k">def</span> <span class="nf">species</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__species</span>
+    
+    <span class="nd">@species</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">species</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newSpecies</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__species</span> <span class="o">=</span> <span class="n">newSpecies</span>
+        
+    <span class="nd">@species</span><span class="o">.</span><span class="n">deleter</span>
+    <span class="k">def</span> <span class="nf">species</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__species</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initiate and get</span>
+<span class="n">pandaBear</span> <span class="o">=</span> <span class="n">animal</span><span class="p">(</span><span class="s2">&quot;panda&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pandaBear</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+
+<span class="c1"># set</span>
+<span class="n">pandaBear</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="s2">&quot;grizzly&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pandaBear</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+
+<span class="c1"># delete</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pandaBear</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">pandaBear</span><span class="o">.</span><span class="n">species</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pandaBear</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>panda
+grizzly
+{&#39;_animal__species&#39;: &#39;grizzly&#39;}
+{}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instant-class-and-static-methods">
+<h2><span class="section-number">3.8. </span>Instant, Class, and Static Methods<a class="headerlink" href="#instant-class-and-static-methods" title="Permalink to this headline">¶</a></h2>
+<p><strong>Instant</strong> - a basic class method, takes <code class="docutils literal notranslate"><span class="pre">self</span></code> and points to an instance of the class</p>
+<p><strong>Class</strong> - takes a class parameter <code class="docutils literal notranslate"><span class="pre">cls</span></code> and points to the class when the method is called</p>
+<p><strong>Static</strong> - do not require a class instance creation, thus are not dependent on the state of the object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;instance method called&#39;</span><span class="p">,</span> <span class="bp">self</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">classmethod</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;class method called&#39;</span><span class="p">,</span> <span class="bp">cls</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">staticmethod</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;static method called&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;instance method called&#39;, &lt;__main__.MyClass at 0x102e254f0&gt;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">classmethod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;class method called&#39;, __main__.MyClass)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">staticmethod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;static method called&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="class-methods-when-to-use">
+<h3><span class="section-number">3.8.1. </span>Class methods: when to use<a class="headerlink" href="#class-methods-when-to-use" title="Permalink to this headline">¶</a></h3>
+<p>One example of usage is with <em>factory functions</em>. These are predefined methods that feed back into the class.</p>
+<p><strong>Pizza example.</strong></p>
+<p>Assume we have a class <code class="docutils literal notranslate"><span class="pre">pizza</span></code> that allows users to define toppings. We also want to have some preset pizza types however.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">pizza</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ingredients</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ingredients</span> <span class="o">=</span> <span class="n">ingredients</span>
+    
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="k">return</span> <span class="s2">&quot;Ingredients: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ingredients</span><span class="p">)</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">jacobSpecial</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">([</span><span class="s1">&#39;mozzarella&#39;</span><span class="p">,</span> <span class="s1">&#39;pineapple&#39;</span><span class="p">,</span> <span class="s1">&#39;sweetcorn&#39;</span><span class="p">,</span> <span class="s1">&#39;olives&#39;</span><span class="p">])</span>
+    
+    
+<span class="c1"># we can use the class as normal</span>
+<span class="n">standardPizza</span> <span class="o">=</span> <span class="n">pizza</span><span class="p">([</span><span class="s1">&#39;mozzarella&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">standardPizza</span><span class="p">)</span>
+
+
+<span class="c1"># or we can call the classmethod</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pizza</span><span class="o">.</span><span class="n">jacobSpecial</span><span class="p">())</span>
+
+
+<span class="c1"># note how it exists in the new object</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">standardPizza</span><span class="o">.</span><span class="n">jacobSpecial</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingredients: [&#39;mozzarella&#39;]
+Ingredients: [&#39;mozzarella&#39;, &#39;pineapple&#39;, &#39;sweetcorn&#39;, &#39;olives&#39;]
+Ingredients: [&#39;mozzarella&#39;, &#39;pineapple&#39;, &#39;sweetcorn&#39;, &#39;olives&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="static-methods-when-to-use">
+<h3><span class="section-number">3.8.2. </span>Static methods: when to use<a class="headerlink" href="#static-methods-when-to-use" title="Permalink to this headline">¶</a></h3>
+<p>Day to day, static methods aren’t used often.</p>
+<p>A large benefit is improving <strong>code readability</strong>, signifying that the method does not depend on state of the object itself.</p>
+<p>When then?:</p>
+<ol class="simple">
+<li><p>grouping a utility function in a class (because it can’t go anywhere else)</p></li>
+<li><p>having a single implementation</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. grouping a utility function in a class (because it can&#39;t go anywhere else)</span>
+
+<span class="k">class</span> <span class="nc">Dates</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__date</span> <span class="o">=</span> <span class="n">date</span>
+    
+    <span class="k">def</span> <span class="nf">getDate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__date</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">toDashDate</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+
+<span class="n">dateObj</span> <span class="o">=</span> <span class="n">Dates</span><span class="p">(</span><span class="s2">&quot;01/01/2020&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dateObj</span><span class="o">.</span><span class="n">getDate</span><span class="p">())</span>
+
+<span class="n">Dates</span><span class="o">.</span><span class="n">toDashDate</span><span class="p">(</span><span class="s2">&quot;01/01/2020&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>01/01/2020
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;01-01-2020&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">toDashDate</span></code> is completely independent of the class and object, but storing the method here makes sense.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. having a single implementation</span>
+
+<span class="k">class</span> <span class="nc">Dates</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">date</span>
+    
+    <span class="k">def</span> <span class="nf">getDate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">date</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">toDashDate</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+    
+
+<span class="k">class</span> <span class="nc">DatesWithSlashes</span><span class="p">(</span><span class="n">Dates</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">getDate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Dates</span><span class="o">.</span><span class="n">toDashDate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>    
+
+<span class="n">dateObj</span> <span class="o">=</span> <span class="n">Dates</span><span class="p">(</span><span class="s2">&quot;01/01/2020&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dateObj</span><span class="o">.</span><span class="n">getDate</span><span class="p">())</span>
+
+
+<span class="n">dateFromDB</span> <span class="o">=</span> <span class="n">DatesWithSlashes</span><span class="p">(</span><span class="s2">&quot;15/12/2016&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dateFromDB</span><span class="o">.</span><span class="n">getDate</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>01/01/2020
+15-12-2016
+</pre></div>
+</div>
+</div>
+</div>
+<p>here we wouldn’t want <code class="docutils literal notranslate"><span class="pre">DatesWithSlashes</span></code> to override the static utility</p>
+</div>
+</div>
+<div class="section" id="magic-methods">
+<h2><span class="section-number">3.9. </span>Magic Methods<a class="headerlink" href="#magic-methods" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">3.10. </span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">__repr__()</span></code> is used to help with printing the object.</p>
+<p>it gets called when you try to convert an object into a string through the various means that are available eg. <code class="docutils literal notranslate"><span class="pre">print()</span></code>, <code class="docutils literal notranslate"><span class="pre">str()</span></code>, etc.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -968,8 +1600,8 @@ Hello I am a banner
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python_basic.html" title="previous page"><span class="section-number">1. </span>Python: Basics</a>
-    <a class='right-next' id="next-link" href="python_numpy_pandas.html" title="next page"><span class="section-number">3. </span>Python: Numpy and Pandas</a>
+    <a class='left-prev' id="prev-link" href="python_numpy_pandas.html" title="previous page"><span class="section-number">2. </span>Python: Numpy and Pandas</a>
+    <a class='right-next' id="next-link" href="cpp.html" title="next page"><span class="section-number">4. </span>C++</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

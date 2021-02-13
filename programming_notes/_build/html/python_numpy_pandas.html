@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Python: Numpy and Pandas &#8212; Programming Notes</title>
+    <title>2. Python: Numpy and Pandas &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. C++" href="cpp.html" />
-    <link rel="prev" title="2. Python: Advanced" href="python_advanced.html" />
+    <link rel="next" title="3. Python: Advanced" href="python_advanced.html" />
+    <link rel="prev" title="1. Python: Basics" href="python_basic.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -105,14 +105,14 @@
    1. Python: Basics
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_advanced.html">
-   2. Python: Advanced
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Python: Numpy and Pandas
+   2. Python: Numpy and Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_advanced.html">
+   3. Python: Advanced
   </a>
  </li>
  <li class="toctree-l1">
@@ -128,6 +128,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="rlang.html">
    6. R
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ml_basics.html">
+   1. The Basics
   </a>
  </li>
 </ul>
@@ -241,80 +253,117 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numpy">
-   3.1. Numpy
+   2.1. Numpy
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-arrays-vectorisation">
-     3.1.1. Adding arrays (vectorisation)
+     2.1.1. Adding arrays (vectorisation)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#slicing">
-     3.1.2. Slicing
+     2.1.2. Slicing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#numpy-data-types">
-     3.1.3. Numpy Data Types
+     2.1.3. Numpy Data Types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#copy-and-view">
-     3.1.4. Copy and view
+     2.1.4. Copy and view
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reshape">
-     3.1.5. Reshape
+     2.1.5. Reshape
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterating">
-     3.1.6. Iterating
+     2.1.6. Iterating
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#joining-arrays">
-     3.1.7. Joining arrays
+     2.1.7. Joining arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#splitting-arrays">
-     3.1.8. Splitting arrays
+     2.1.8. Splitting arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#searching-arrays">
-     3.1.9. Searching Arrays
+     2.1.9. Searching Arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorting">
-     3.1.10. Sorting
+     2.1.10. Sorting
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#filtering">
-     3.1.11. Filtering
+     2.1.11. Filtering
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#random-numbers">
-     3.1.12. Random numbers
+     2.1.12. Random numbers
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ufuncs">
-   3.2. ufuncs
+   2.2. ufuncs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vectorisation">
-   3.3. Vectorisation
+   2.3. Vectorisation
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   2.4. Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataframe-retrival">
+     2.4.1. Dataframe Retrival
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-and-write">
+     2.4.2. Read and Write
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#view-the-data">
+     2.4.3. View the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleaning">
+     2.4.4. Cleaning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-datatype">
+     2.4.5. Convert datatype
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correcting-data">
+     2.4.6. Correcting data
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -328,9 +377,9 @@
               <div>
                 
   <div class="section" id="python-numpy-and-pandas">
-<h1><span class="section-number">3. </span>Python: Numpy and Pandas<a class="headerlink" href="#python-numpy-and-pandas" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Python: Numpy and Pandas<a class="headerlink" href="#python-numpy-and-pandas" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="numpy">
-<h2><span class="section-number">3.1. </span>Numpy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Numpy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -386,7 +435,7 @@
 </div>
 </div>
 <div class="section" id="adding-arrays-vectorisation">
-<h3><span class="section-number">3.1.1. </span>Adding arrays (vectorisation)<a class="headerlink" href="#adding-arrays-vectorisation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.1. </span>Adding arrays (vectorisation)<a class="headerlink" href="#adding-arrays-vectorisation" title="Permalink to this headline">¶</a></h3>
 <p>N.B. this doesn’t concatenate the arrays</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -405,7 +454,7 @@
 </div>
 </div>
 <div class="section" id="slicing">
-<h3><span class="section-number">3.1.2. </span>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.2. </span>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
@@ -441,7 +490,7 @@
 </div>
 </div>
 <div class="section" id="numpy-data-types">
-<h3><span class="section-number">3.1.3. </span>Numpy Data Types<a class="headerlink" href="#numpy-data-types" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3. </span>Numpy Data Types<a class="headerlink" href="#numpy-data-types" title="Permalink to this headline">¶</a></h3>
 <p>check with <code class="docutils literal notranslate"><span class="pre">.dtypes</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -500,7 +549,7 @@ float64
 </div>
 </div>
 <div class="section" id="copy-and-view">
-<h3><span class="section-number">3.1.4. </span>Copy and view<a class="headerlink" href="#copy-and-view" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.4. </span>Copy and view<a class="headerlink" href="#copy-and-view" title="Permalink to this headline">¶</a></h3>
 <p>copy creates its own copy</p>
 <p>view is linked to the original</p>
 <p><code class="docutils literal notranslate"><span class="pre">base</span></code> checks if array owns it’s own data (<code class="docutils literal notranslate"><span class="pre">None</span></code> if true)</p>
@@ -539,7 +588,7 @@ None
 </div>
 </div>
 <div class="section" id="reshape">
-<h3><span class="section-number">3.1.5. </span>Reshape<a class="headerlink" href="#reshape" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.5. </span>Reshape<a class="headerlink" href="#reshape" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
@@ -590,7 +639,7 @@ None
 </div>
 </div>
 <div class="section" id="iterating">
-<h3><span class="section-number">3.1.6. </span>Iterating<a class="headerlink" href="#iterating" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.6. </span>Iterating<a class="headerlink" href="#iterating" title="Permalink to this headline">¶</a></h3>
 <p>Arrays are iterable, if nested we can use <code class="docutils literal notranslate"><span class="pre">nditer</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">ndenumerate</span></code> can be used to note where in the array structure the element is located</p>
 <div class="cell docutils container">
@@ -650,7 +699,7 @@ None
 </div>
 </div>
 <div class="section" id="joining-arrays">
-<h3><span class="section-number">3.1.7. </span>Joining arrays<a class="headerlink" href="#joining-arrays" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.7. </span>Joining arrays<a class="headerlink" href="#joining-arrays" title="Permalink to this headline">¶</a></h3>
 <p>we can also specifcy joining on <strong>rows</strong> (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or <strong>columns</strong> (<code class="docutils literal notranslate"><span class="pre">axis=1</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -740,7 +789,7 @@ dstack
 </div>
 </div>
 <div class="section" id="splitting-arrays">
-<h3><span class="section-number">3.1.8. </span>Splitting arrays<a class="headerlink" href="#splitting-arrays" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.8. </span>Splitting arrays<a class="headerlink" href="#splitting-arrays" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.array_split</span></code> allows for non-exact splits, wereas <code class="docutils literal notranslate"><span class="pre">np.split</span></code> requires an exact match</p>
 <p>splits can be carried out on multi-dimensional arrays with the axis specified.</p>
 <div class="cell docutils container">
@@ -799,7 +848,7 @@ dstack
 </div>
 </div>
 <div class="section" id="searching-arrays">
-<h3><span class="section-number">3.1.9. </span>Searching Arrays<a class="headerlink" href="#searching-arrays" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.9. </span>Searching Arrays<a class="headerlink" href="#searching-arrays" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">])</span>
@@ -843,7 +892,7 @@ dstack
 </div>
 </div>
 <div class="section" id="sorting">
-<h3><span class="section-number">3.1.10. </span>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.10. </span>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arrInt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -878,7 +927,7 @@ dstack
 </div>
 </div>
 <div class="section" id="filtering">
-<h3><span class="section-number">3.1.11. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.11. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
@@ -942,15 +991,15 @@ dstack
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy takes 0.022242 s to run.
-base takes 0.323809 s to run.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy takes 0.021225 s to run.
+base takes 0.314613 s to run.
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="random-numbers">
-<h3><span class="section-number">3.1.12. </span>Random numbers<a class="headerlink" href="#random-numbers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.12. </span>Random numbers<a class="headerlink" href="#random-numbers" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">random</span>
@@ -984,7 +1033,7 @@ choices
 </div>
 </div>
 <div class="section" id="ufuncs">
-<h2><span class="section-number">3.2. </span>ufuncs<a class="headerlink" href="#ufuncs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>ufuncs<a class="headerlink" href="#ufuncs" title="Permalink to this headline">¶</a></h2>
 <p>universal functions operate on <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> objects</p>
 <p>Good for:</p>
 <ul class="simple">
@@ -1147,7 +1196,7 @@ choices
 </div>
 </div>
 <div class="section" id="vectorisation">
-<h2><span class="section-number">3.3. </span>Vectorisation<a class="headerlink" href="#vectorisation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Vectorisation<a class="headerlink" href="#vectorisation" title="Permalink to this headline">¶</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">np.frompyfunc</span></code></strong></p>
 <ul class="simple">
 <li><p>Takes an arbitrary Python function and returns a ufunc</p></li>
@@ -1194,6 +1243,655 @@ choices
 </div>
 </div>
 </div>
+<div class="section" id="pandas">
+<h2><span class="section-number">2.4. </span>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h2>
+<p>works with <strong>dataframes</strong></p>
+<p>slow but sometimes convenient</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">bearData</span>  <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;species&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;grizzly&quot;</span><span class="p">,</span> <span class="s2">&quot;panda&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> 
+<span class="p">}</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">bearData</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>grizzly</td>
+      <td>800</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>panda</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>black</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>series</strong> are 1D pandas arrays (like a column in the df)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;North America&quot;</span><span class="p">,</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span> <span class="s2">&quot;North America&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    North America
+1            China
+2    North America
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>you can create own index labels</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;North America&quot;</span><span class="p">,</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span> <span class="s2">&quot;North America&quot;</span><span class="p">],</span>
+                   <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">])</span>
+
+
+<span class="n">country</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    North America
+b            China
+c    North America
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dataframe-retrival">
+<h3><span class="section-number">2.4.1. </span>Dataframe Retrival<a class="headerlink" href="#dataframe-retrival" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bearData</span>  <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;species&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;grizzly&quot;</span><span class="p">,</span> <span class="s2">&quot;panda&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;North America&quot;</span><span class="p">,</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span> <span class="s2">&quot;North America&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">bearData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">bearData</span><span class="p">)</span>
+
+<span class="c1"># specify the row</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bearData</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bearData</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span> <span class="c1"># return from a list</span>
+
+<span class="c1"># specific column</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bearData</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>species          grizzly
+weight               800
+country    North America
+Name: 0, dtype: object
+
+
+   species  weight        country
+0  grizzly     800  North America
+2    black     100  North America
+
+
+0    grizzly
+1      panda
+2      black
+Name: species, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-and-write">
+<h3><span class="section-number">2.4.2. </span>Read and Write<a class="headerlink" href="#read-and-write" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write </span>
+<span class="n">bearData</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data/bearSpecies.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read</span>
+
+<span class="n">treeData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/trees.csv&quot;</span><span class="p">)</span>
+
+<span class="n">treeData</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Species</th>
+      <th>Distance.m</th>
+      <th>Angle.degrees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Populus tremula</td>
+      <td>31.665834</td>
+      <td>41.282636</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Quercus robur</td>
+      <td>45.984993</td>
+      <td>44.535917</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ginkgo biloba</td>
+      <td>31.241767</td>
+      <td>25.146259</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fraxinus excelsior</td>
+      <td>34.616669</td>
+      <td>23.336127</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Betula pendula</td>
+      <td>45.466165</td>
+      <td>38.349130</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>Pinus sylvestris</td>
+      <td>33.405883</td>
+      <td>35.996387</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>Carpinus betulus</td>
+      <td>39.501562</td>
+      <td>30.298136</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Fagus sylvatica</td>
+      <td>43.988915</td>
+      <td>27.079336</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>Carpinus betulus</td>
+      <td>37.849727</td>
+      <td>38.573435</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>Alnus glutinosa</td>
+      <td>43.528852</td>
+      <td>36.761984</td>
+    </tr>
+  </tbody>
+</table>
+<p>120 rows × 3 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="view-the-data">
+<h3><span class="section-number">2.4.3. </span>View the data<a class="headerlink" href="#view-the-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">treeData</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Species</th>
+      <th>Distance.m</th>
+      <th>Angle.degrees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Populus tremula</td>
+      <td>31.665834</td>
+      <td>41.282636</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Quercus robur</td>
+      <td>45.984993</td>
+      <td>44.535917</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ginkgo biloba</td>
+      <td>31.241767</td>
+      <td>25.146259</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fraxinus excelsior</td>
+      <td>34.616669</td>
+      <td>23.336127</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Betula pendula</td>
+      <td>45.466165</td>
+      <td>38.349130</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">treeData</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Species</th>
+      <th>Distance.m</th>
+      <th>Angle.degrees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>115</th>
+      <td>Pinus sylvestris</td>
+      <td>33.405883</td>
+      <td>35.996387</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>Carpinus betulus</td>
+      <td>39.501562</td>
+      <td>30.298136</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Fagus sylvatica</td>
+      <td>43.988915</td>
+      <td>27.079336</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>Carpinus betulus</td>
+      <td>37.849727</td>
+      <td>38.573435</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>Alnus glutinosa</td>
+      <td>43.528852</td>
+      <td>36.761984</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">treeData</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 120 entries, 0 to 119
+Data columns (total 3 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   Species        120 non-null    object 
+ 1   Distance.m     120 non-null    float64
+ 2   Angle.degrees  120 non-null    float64
+dtypes: float64(2), object(1)
+memory usage: 2.9+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">treeData</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">treeData</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(120, 3)
+360
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cleaning">
+<h3><span class="section-number">2.4.4. </span>Cleaning<a class="headerlink" href="#cleaning" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirtydata.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Duration</th>
+      <th>Date</th>
+      <th>Pulse</th>
+      <th>Maxpulse</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>60</td>
+      <td>'2020/12/01'</td>
+      <td>110</td>
+      <td>130</td>
+      <td>409.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>60</td>
+      <td>'2020/12/02'</td>
+      <td>117</td>
+      <td>145</td>
+      <td>479.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>60</td>
+      <td>'2020/12/03'</td>
+      <td>103</td>
+      <td>135</td>
+      <td>340.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>45</td>
+      <td>'2020/12/04'</td>
+      <td>109</td>
+      <td>175</td>
+      <td>282.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>45</td>
+      <td>'2020/12/05'</td>
+      <td>117</td>
+      <td>148</td>
+      <td>406.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirtydata.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+<span class="c1"># drop na</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># inplace change the original df</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>160
+145
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirtydata.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># replace the na values</span>
+<span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="convert-datatype">
+<h3><span class="section-number">2.4.5. </span>Convert datatype<a class="headerlink" href="#convert-datatype" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirtydata.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 29 entries, 0 to 31
+Data columns (total 5 columns):
+ #   Column    Non-Null Count  Dtype         
+---  ------    --------------  -----         
+ 0   Duration  29 non-null     int64         
+ 1   Date      29 non-null     datetime64[ns]
+ 2   Pulse     29 non-null     int64         
+ 3   Maxpulse  29 non-null     int64         
+ 4   Calories  29 non-null     float64       
+dtypes: datetime64[ns](1), float64(1), int64(3)
+memory usage: 1.4 KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="correcting-data">
+<h3><span class="section-number">2.4.6. </span>Correcting data<a class="headerlink" href="#correcting-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirtydata.csv&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># replace value</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Duration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">45</span> 
+
+<span class="c1"># drop row</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># index 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Duration          Date  Pulse  Maxpulse  Calories
+0        60  &#39;2020/12/01&#39;    110       130     409.1
+1        60  &#39;2020/12/02&#39;    117       145     479.0
+2        60  &#39;2020/12/03&#39;    103       135     340.0
+3        45  &#39;2020/12/04&#39;    109       175     282.4
+4        45  &#39;2020/12/05&#39;    117       148     406.0
+   Duration          Date  Pulse  Maxpulse  Calories
+1        60  &#39;2020/12/02&#39;    117       145     479.0
+2        60  &#39;2020/12/03&#39;    103       135     340.0
+3        45  &#39;2020/12/04&#39;    109       175     282.4
+4        45  &#39;2020/12/05&#39;    117       148     406.0
+5        60  &#39;2020/12/06&#39;    102       127     300.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirtydata.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
+<span class="c1"># remove duplicate</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     False
+1     False
+2     False
+3     False
+4     False
+5     False
+6     False
+7     False
+8     False
+9     False
+10    False
+11    False
+12     True
+13    False
+14    False
+15    False
+16    False
+17    False
+18    False
+19    False
+20    False
+21    False
+22    False
+23    False
+24    False
+25    False
+26    False
+27    False
+28    False
+29    False
+30    False
+31    False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1224,8 +1922,8 @@ choices
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python_advanced.html" title="previous page"><span class="section-number">2. </span>Python: Advanced</a>
-    <a class='right-next' id="next-link" href="cpp.html" title="next page"><span class="section-number">4. </span>C++</a>
+    <a class='left-prev' id="prev-link" href="python_basic.html" title="previous page"><span class="section-number">1. </span>Python: Basics</a>
+    <a class='right-next' id="next-link" href="python_advanced.html" title="next page"><span class="section-number">3. </span>Python: Advanced</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

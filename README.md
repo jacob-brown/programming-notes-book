@@ -18,6 +18,9 @@ Python only (zsh, c++, R are not supported by GH actions)???
 * The book should deploy automatically using **GitHub Actions**. 
 * It should take ~5 mins to update the online version. 
 
+
+# Local Build
+file:///Users/jacobbrown/Documents/Productivity/notes_Jupyter/mynotesbook/programming_notes/programming_notes/_build/html/index.html
 # Checking the deployment status
 
 Go to actions: https://github.com/jacob-brown/programming-notes-book/actions

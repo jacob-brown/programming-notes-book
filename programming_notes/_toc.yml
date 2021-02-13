@@ -7,16 +7,20 @@
   chapters:
   - file: python_basic
     title: "Python: Basics"
-  - file: python_advanced
-    title: "Python: Advanced"
   - file: python_numpy_pandas
     title: "Python: Numpy and Pandas"
+  - file: python_advanced
+    title: "Python: Advanced"
   - file: cpp
     title: "C++"
   - file: shell
     title: Shell # added as title doesn't always show with notebooks
   - file: rlang
     title: R
+- part: Machine Learning
+  chapters:
+  - file: ml_basics
+    title: "The Basics"
 
 - part: Appendix
   chapters:

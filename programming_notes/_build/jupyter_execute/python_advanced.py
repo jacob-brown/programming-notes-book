@@ -47,6 +47,25 @@ print(tiger.weight)
 del tiger.habitat
 print(tiger.__dict__) # quick investigation
 
+### Attribute Visibility
+
+public - **no change**
+
+protected - **1 underscore prefix**
+
+private - **2 underscore prefix**
+
+class employee:
+    def __init__(self, name, salary, bonus):
+        self.name = name # public
+        self._salary = salary # protected
+        self.__bonus = bonus # private
+        
+jacob = employee("jacob", 30000, 2000)
+print(jacob.name)
+print(jacob._salary)
+#print(jacob.__bonus) # would return an error
+
 ### Inheritance
 Inheritance allows us to define a class that inherits methods and properties from another class. 
 
@@ -132,6 +151,156 @@ ant = insect("fire ant", 0.001, "tropical forest", 100000)
 ant.printColonySize()
 
 ant.__dict__
+
+### Super - Extended
+
+from - https://realpython.com/python-super/#what-can-super-do-for-you
+
+`super(Square, self).__init__()`
+the first element should be the same name as the **new class**
+
+calling methods using super: `super().area()`
+
+imagine that we don't want to inherite a method eg. a cube should not be able to use `area()` outside of the class. 
+
+In this instance we should **modify** the method by using the same name
+
+
+
+# superclass - parent
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+    def perimeter(self):
+        return 2 * self.length + 2 * self.width
+
+
+# subclass - child
+class Square(Rectangle):
+    def __init__(self, length):
+        super(Square, self).__init__(length, length)
+
+
+class Cube(Square):
+    # modify an existing method
+    def area(self):
+        face_area = super().area()  # using the area() method
+        return face_area * 6
+
+    # add a new method
+    def volume(self):
+        face_area = super().area()
+        return face_area * self.length
+
+
+print("square")
+squareObj = Square(4)
+print(squareObj.area())
+
+print("cube")
+cubeObj = Cube(4)
+print(cubeObj.area())
+
+### Multiple inheritance
+
+We must be careful when inheriting from multiple classes.
+
+For example, the below *will return an error*
+
+
+**Method Resolution Order** - is the order in which the methods are called. 
+
+`__mro__` - provides info on the order
+
+class Triangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return 0.5 * self.base * self.height
+
+
+# inherit from 2 classes
+class RightPyramid(Triangle, Square):
+    def __init__(self, base, slant_height):
+        self.base = base
+        self.slant_height = slant_height
+
+    def area(self):
+        base_area = super().area
+        perimeter = super().perimeter
+        return 0.5 * perimeter * self.slant_height + base_area
+
+pyramid = RightPyramid(2, 4)
+# pyramid.area() # returns an error
+
+# method resolution order
+RightPyramid.__mro__
+
+note how the order is RightPyramid, Triangle, Square
+
+We want to switch the order of Triangle and Square
+
+class RightPyramidAlt(Square, Triangle):
+    def __init__(self, base, slant_height):
+        self.base = base
+        self.slant_height = slant_height
+
+    def area(self):
+        base_area = super().area
+        perimeter = super().perimeter
+        return 0.5 * perimeter * self.slant_height + base_area
+
+RightPyramidAlt.__mro__
+
+There are still some issues though: 
+1. two separate classes with the same method name and signature i.e. we are inheriting the `area()` method from Square and Triange
+2. the new class doesn't distinguish between Triange and Square objects very well. i.e. they don't reference their superclass
+
+Issue 1 resolution: name the method `area()` differently eg. `squ_area` and `tri_area`
+
+
+Issue 2 resolution: 
+* add `super().__init__()` to the `.__init__()` in Rectange and Trainge
+* allow `.__init__()` to take keyword dictionary
+
+Alternatively, we could define a new class 
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+
+class Square(Rectangle):
+    def __init__(self, length):
+        super().__init__(length, length)
+
+
+# the new volume superclass
+class Volume:
+    def volume(self):
+        return self.area() * self.height
+
+
+# subclass
+class Cube(Volume, Square):
+    def __init__(self, length):
+        super().__init__(length)
+        self.height = length
+
+
+cube = Cube(2)
+print(cube.volume())
 
 ### Iterators
 Is an object that can be iterated upon. 
@@ -223,7 +392,7 @@ print(skate)
 
 ### Encapsulation 
 
-note how the `__maxprice` cannot be changed without the use of the specificed function.
+note how the `__maxprice` cannot be changed without the use of the specificed function as it is a *private attribute*
 
 class Computer:
     def __init__(self):
@@ -453,3 +622,238 @@ def printBanner(msg):
 printBanner("Hello I am a banner")
 
 
+## Getters, setters, and `property`
+
+When using getters and setters it is important to ensure we have backwards compatibility. 
+
+For example, assume we want to convert the below use getters and setters
+
+class animal:
+    def __init__(self, species):
+        self.species = species
+
+bear = animal("panda")
+
+print(bear.species)
+
+class animal:
+    def __init__(self, species):
+        self.setSpecies(species)
+    
+    def setSpecies(self, valueSpecies):
+        self.__species = valueSpecies # note the attribute is private
+    
+    def getSpecies(self):
+        return self.__species
+
+bear = animal("panda")
+print(bear.getSpecies())
+bear.setSpecies("grizzly")
+print(bear.getSpecies())
+
+So one issue we now face is that `bear.species` has now been replaced with `bear.getSpecies()`
+
+This is not backwards compatible...
+
+This is where `property` comes in! 
+
+`property(fget=None, fset=None, fdel=None, doc=None)`
+
+`fget` - get value attribute
+
+`fset` - set value attribute
+
+`fdel` - delete value attribute
+
+`doc` - string value
+
+
+class animal:
+    def __init__(self, species):
+        self.setSpecies(species)
+    
+    def setSpecies(self, valueSpecies):
+        self.__species = valueSpecies # note the attribute is private
+    
+    def getSpecies(self):
+        return self.__species
+    
+    # enable backwards compatibility
+    species = property(fget=getSpecies, fset=setSpecies)
+
+bear = animal("panda")
+print(bear.species)
+bear.species = "grizzly"
+print(bear.species)
+
+
+### `@property` 
+
+A more pythonic way, is to use the `@property`  decorator.
+
+Which has:
+* `getter (fget)` - this is the default with @property
+* `setter (fset)`
+* `deleter (fdel)`
+* `mro`
+
+When using the same name eg. `species` it is important that the visability is **private** or **protected** 
+
+N.B. how `@property` is used for establising and getting and `@funcName.setter`/`@funcName.deleter` are used.
+
+class animal:
+    def __init__(self, species):
+        self.species = species 
+        
+    @property 
+    def species(self):
+        return self.__species
+    
+    @species.setter
+    def species(self, newSpecies):
+        self.__species = newSpecies
+        
+    @species.deleter
+    def species(self):
+        del self.__species
+
+# initiate and get
+pandaBear = animal("panda")
+print(pandaBear.species)
+
+# set
+pandaBear.species = "grizzly"
+print(pandaBear.species)
+
+# delete
+print(pandaBear.__dict__)
+del pandaBear.species
+print(pandaBear.__dict__)
+
+## Instant, Class, and Static Methods
+
+**Instant** - a basic class method, takes `self` and points to an instance of the class
+
+**Class** - takes a class parameter `cls` and points to the class when the method is called
+
+**Static** - do not require a class instance creation, thus are not dependent on the state of the object.
+
+class MyClass:
+    def method(self):
+        return 'instance method called', self
+
+    @classmethod
+    def classmethod(cls):
+        return 'class method called', cls
+
+    @staticmethod
+    def staticmethod():
+        return 'static method called'
+
+
+obj = MyClass()
+obj.method()
+
+obj.classmethod()
+
+obj.staticmethod()
+
+### Class methods: when to use
+
+One example of usage is with *factory functions*. These are predefined methods that feed back into the class.
+
+**Pizza example.**
+
+Assume we have a class `pizza` that allows users to define toppings. We also want to have some preset pizza types however. 
+
+
+class pizza:
+    def __init__(self, ingredients):
+        self.ingredients = ingredients
+    
+    def __repr__(self): 
+        return "Ingredients: {}".format(self.ingredients)
+    
+    @classmethod
+    def jacobSpecial(cls):
+        return cls(['mozzarella', 'pineapple', 'sweetcorn', 'olives'])
+    
+    
+# we can use the class as normal
+standardPizza = pizza(['mozzarella'])
+print(standardPizza)
+
+
+# or we can call the classmethod
+print(pizza.jacobSpecial())
+
+
+# note how it exists in the new object
+print(standardPizza.jacobSpecial()) 
+
+### Static methods: when to use
+
+Day to day, static methods aren't used often.
+
+A large benefit is improving **code readability**, signifying that the method does not depend on state of the object itself.
+
+When then?:
+1. grouping a utility function in a class (because it can't go anywhere else)
+2. having a single implementation
+
+
+
+# 1. grouping a utility function in a class (because it can't go anywhere else)
+
+class Dates:
+    def __init__(self, date):
+        self.__date = date
+    
+    def getDate(self):
+        return self.__date
+    
+    @staticmethod
+    def toDashDate(date):
+        return date.replace("/", "-")
+
+dateObj = Dates("01/01/2020")
+print(dateObj.getDate())
+
+Dates.toDashDate("01/01/2020")
+
+`toDashDate` is completely independent of the class and object, but storing the method here makes sense.
+
+# 2. having a single implementation
+
+class Dates:
+    def __init__(self, date):
+        self.date = date
+    
+    def getDate(self):
+        return self.date
+    
+    @staticmethod
+    def toDashDate(date):
+        return date.replace("/", "-")
+    
+
+class DatesWithSlashes(Dates):
+    def getDate(self):
+        return Dates.toDashDate(self.date)    
+
+dateObj = Dates("01/01/2020")
+print(dateObj.getDate())
+
+
+dateFromDB = DatesWithSlashes("15/12/2016")
+print(dateFromDB.getDate())
+
+here we wouldn't want `DatesWithSlashes` to override the static utility 
+
+## Magic Methods
+
+## 
+
+`__repr__()` is used to help with printing the object. 
+
+it gets called when you try to convert an object into a string through the various means that are available eg. `print()`, `str()`, etc.

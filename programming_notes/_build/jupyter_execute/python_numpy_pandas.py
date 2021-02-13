@@ -475,3 +475,118 @@ def myAdder(x, y):
 myAdder = np.vectorize(myAdder)
 
 myAdder([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])
+
+
+## Pandas
+works with **dataframes**
+
+slow but sometimes convenient 
+
+import pandas as pd
+
+bearData  = {
+    "species": ["grizzly", "panda", "black"],
+    "weight": [800, 400, 100] 
+}
+
+pd.DataFrame(bearData)
+
+**series** are 1D pandas arrays (like a column in the df)
+
+country = pd.Series(["North America", "China", "North America"])
+
+print(country)
+
+you can create own index labels
+
+country = pd.Series(["North America", "China", "North America"],
+                   index = ["a", "b", "c"])
+
+
+country
+
+### Dataframe Retrival
+
+bearData  = {
+    "species": ["grizzly", "panda", "black"],
+    "weight": [800, 400, 100],
+    "country": ["North America", "China", "North America"]
+}
+
+bearData = pd.DataFrame(bearData)
+
+# specify the row
+print(bearData.loc[0])
+print("\n")
+print(bearData.loc[[0, 2]]) # return from a list
+
+# specific column
+print("\n")
+print(bearData["species"])
+
+
+### Read and Write
+
+# write 
+bearData.to_csv("data/bearSpecies.csv", index=False)
+
+# read
+
+treeData = pd.read_csv("data/trees.csv")
+
+treeData
+
+### View the data
+
+
+treeData.head()
+
+treeData.tail()
+
+treeData.info()
+
+print(treeData.shape)
+print(treeData.size)
+
+### Cleaning
+
+df = pd.read_csv("data/dirtydata.csv")
+df.head()
+
+df = pd.read_csv("data/dirtydata.csv")
+print(df.size)
+
+# drop na
+df.dropna(inplace = True) # inplace change the original df
+
+print(df.size)
+
+df = pd.read_csv("data/dirtydata.csv")
+
+# replace the na values
+df.fillna(130, inplace = True) 
+
+### Convert datatype
+
+df = pd.read_csv("data/dirtydata.csv")
+df.dropna(inplace = True)
+df["Date"] = pd.to_datetime(df["Date"])
+df.info()
+
+### Correcting data
+
+df = pd.read_csv("data/dirtydata.csv")
+
+
+# replace value
+df.loc[7, "Duration"] = 45 
+
+# drop row
+print(df.head())
+df.drop(0, inplace = True) # index 0
+print(df.head())
+
+df = pd.read_csv("data/dirtydata.csv")
+print(df.duplicated())
+# remove duplicate
+df.drop_duplicates(inplace = True) 

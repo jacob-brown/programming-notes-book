@@ -130,6 +130,11 @@
    6. R
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rlang.html#basics">
+   7. Basics
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -367,6 +372,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    3.10.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#initiate-and-call-method">
+   3.11. Initiate and call method
   </a>
  </li>
 </ul>
@@ -1564,6 +1574,30 @@ Ingredients: [&#39;mozzarella&#39;, &#39;pineapple&#39;, &#39;sweetcorn&#39;, &#
 <h2><span class="section-number">3.10. </span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">__repr__()</span></code> is used to help with printing the object.</p>
 <p>it gets called when you try to convert an object into a string through the various means that are available eg. <code class="docutils literal notranslate"><span class="pre">print()</span></code>, <code class="docutils literal notranslate"><span class="pre">str()</span></code>, etc.</p>
+</div>
+<div class="section" id="initiate-and-call-method">
+<h2><span class="section-number">3.11. </span>Initiate and call method<a class="headerlink" href="#initiate-and-call-method" title="Permalink to this headline">¶</a></h2>
+<p>sometimes you may want to call a method when the class is initiated</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sayName</span><span class="p">()</span> <span class="c1"># initiate here</span>
+
+    <span class="k">def</span> <span class="nf">sayName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am a&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">dog</span> <span class="o">=</span> <span class="n">animal</span><span class="p">(</span><span class="s2">&quot;dog&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am a dog
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

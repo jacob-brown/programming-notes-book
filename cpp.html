@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. C++ &#8212; Programming Notes</title>
+    <title>6. C++ &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Shell" href="shell.html" />
-    <link rel="prev" title="3. Python: Advanced" href="python_advanced.html" />
+    <link rel="next" title="7. Shell" href="shell.html" />
+    <link rel="prev" title="5. Pytest" href="python_unit_testing.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -115,19 +115,34 @@
    3. Python: Advanced
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_plotting.html">
+   4. Python: Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_unit_testing.html">
+   5. Python: Unit Testing
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. C++
+   6. C++
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="shell.html">
-   5. Shell
+   7. Shell
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rlang.html">
-   6. R
+   8. R
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rlang.html#basics">
+   9. Basics
   </a>
  </li>
 </ul>
@@ -231,114 +246,114 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-script">
-   4.1. Basic script
+   6.1. Basic script
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#compiling">
-   4.2. Compiling
+   6.2. Compiling
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables">
-   4.3. Variables
+   6.3. Variables
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#user-input">
-   4.4. User input
+   6.4. User input
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations">
-   4.5. Operations
+   6.5. Operations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#strings">
-   4.6. Strings
+   6.6. Strings
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#math">
-   4.7. Math
+   6.7. Math
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#if-else">
-   4.8. If…else
+   6.8. If…else
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#switch">
-   4.9. Switch
+   6.9. Switch
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loops">
-   4.10. Loops
+   6.10. Loops
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#while">
-     4.10.1. while
+     6.10.1. while
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#do-while">
-     4.10.2. do/while
+     6.10.2. do/while
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#for">
-     4.10.3. for
+     6.10.3. for
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arrays">
-   4.11. Arrays
+   6.11. Arrays
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   4.12. References
+   6.12. References
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pointers">
-   4.13. Pointers
+   6.13. Pointers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#memory-usage">
-   4.14. Memory usage
+   6.14. Memory usage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stack-vs-heap">
-   4.15. Stack vs Heap
+   6.15. Stack vs Heap
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#functions">
-   4.16. Functions
+   6.16. Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#function-overloading">
-   4.17. Function Overloading
+   6.17. Function Overloading
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#oop">
-   4.18. OOP
+   6.18. OOP
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assigning-methods">
-     4.18.1.
+     6.18.1.
      <strong>
       Assigning methods
      </strong>
@@ -348,57 +363,57 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#constructors">
-   4.19. Constructors
+   6.19. Constructors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access-specifiers">
-   4.20. Access specifiers
+   6.20. Access specifiers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#encapsulation">
-   4.21. Encapsulation
+   6.21. Encapsulation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance">
-   4.22. Inheritance
+   6.22. Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiple-inheritance">
-   4.23. Multiple Inheritance
+   6.23. Multiple Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#protected">
-   4.24. Protected
+   6.24. Protected
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polymorphism">
-   4.25. Polymorphism
+   6.25. Polymorphism
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#c-files">
-   4.26. C++ Files
+   6.26. C++ Files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#writing">
-   4.27. Writing
+   6.27. Writing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading">
-   4.28. Reading
+   6.28. Reading
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exceptions">
-   4.29. Exceptions
+   6.29. Exceptions
   </a>
  </li>
 </ul>
@@ -413,9 +428,9 @@
               <div>
                 
   <div class="section" id="c">
-<h1><span class="section-number">4. </span>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="basic-script">
-<h2><span class="section-number">4.1. </span>Basic script<a class="headerlink" href="#basic-script" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Basic script<a class="headerlink" href="#basic-script" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;iostream&gt;</span></code> - header file, adds functionality</p>
 <p><code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">namespace</span> <span class="pre">std</span></code> - standard library</p>
 <p><code class="docutils literal notranslate"><span class="pre">count</span></code> is an object and the insertion operator (<code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>) is used to print text</p>
@@ -431,7 +446,7 @@
 </div>
 </div>
 <div class="section" id="compiling">
-<h2><span class="section-number">4.2. </span>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>generate the output file: <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">file.cpp</span></code></p></li>
 <li><p>running <code class="docutils literal notranslate"><span class="pre">./a.out</span></code> will execute the program</p></li>
@@ -442,7 +457,7 @@
 </ul>
 </div>
 <div class="section" id="variables">
-<h2><span class="section-number">4.3. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">double</span></code> <code class="docutils literal notranslate"><span class="pre">char</span></code> <code class="docutils literal notranslate"><span class="pre">string</span></code> <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">char</span></code> - single quote</p>
 <p><code class="docutils literal notranslate"><span class="pre">string</span></code> - double quotes</p>
@@ -454,12 +469,12 @@
 <p><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">int</span> <span class="pre">myNum</span> <span class="pre">=</span> <span class="pre">6;</span></code></p>
 </div>
 <div class="section" id="user-input">
-<h2><span class="section-number">4.4. </span>User input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4. </span>User input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">cin</span></code> reads data from keyboard and the extractor <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> is used to assign it to a variable</p>
 <p><code class="docutils literal notranslate"><span class="pre">getline(cin,</span> <span class="pre">userTextIn);</span></code> allows for multiple words to be input</p>
 </div>
 <div class="section" id="operations">
-<h2><span class="section-number">4.5. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
 <p>The common ones are the same: <code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">-</span></code> <code class="docutils literal notranslate"><span class="pre">*</span></code> <code class="docutils literal notranslate"><span class="pre">/</span></code> <code class="docutils literal notranslate"><span class="pre">%</span></code></p>
 <p>Incrementation is <code class="docutils literal notranslate"><span class="pre">++x</span></code> and <code class="docutils literal notranslate"><span class="pre">--x</span></code></p>
 <p><strong>Assignments</strong></p>
@@ -471,18 +486,18 @@
 <p><code class="docutils literal notranslate"><span class="pre">!</span></code> - not</p>
 </div>
 <div class="section" id="strings">
-<h2><span class="section-number">4.6. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.6. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;string&gt;</span></code> must be used for strings</p>
 <p><em>concatenation</em>: <code class="docutils literal notranslate"><span class="pre">stringOne</span> <span class="pre">+</span> <span class="pre">stringTwo</span></code></p>
 <p><em>append</em>: <code class="docutils literal notranslate"><span class="pre">stringOne.append(stringTwo)</span></code></p>
 <p>length <code class="docutils literal notranslate"><span class="pre">stringOne.length()</span></code></p>
 </div>
 <div class="section" id="math">
-<h2><span class="section-number">4.7. </span>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.7. </span>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <p>lots of functions - <a class="reference external" href="https://www.w3schools.com/cpp/cpp_math.asp">https://www.w3schools.com/cpp/cpp_math.asp</a></p>
 </div>
 <div class="section" id="if-else">
-<h2><span class="section-number">4.8. </span>If…else<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.8. </span>If…else<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
 <p>syntax is similar to <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -509,7 +524,7 @@
 </div>
 </div>
 <div class="section" id="switch">
-<h2><span class="section-number">4.9. </span>Switch<a class="headerlink" href="#switch" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.9. </span>Switch<a class="headerlink" href="#switch" title="Permalink to this headline">¶</a></h2>
 <p>don’t use these…it’s only here for reference</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span> <span class="p">(</span><span class="n">month</span><span class="p">)</span>
 	<span class="p">{</span>
@@ -531,9 +546,9 @@
 </div>
 </div>
 <div class="section" id="loops">
-<h2><span class="section-number">4.10. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.10. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="while">
-<h3><span class="section-number">4.10.1. </span>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.10.1. </span>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 	<span class="k">while</span> <span class="p">(</span><span class="n">counter</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span>
@@ -545,7 +560,7 @@
 </div>
 </div>
 <div class="section" id="do-while">
-<h3><span class="section-number">4.10.2. </span>do/while<a class="headerlink" href="#do-while" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.10.2. </span>do/while<a class="headerlink" href="#do-while" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">do</span>
 	<span class="p">{</span>
@@ -556,7 +571,7 @@
 </div>
 </div>
 <div class="section" id="for">
-<h3><span class="section-number">4.10.3. </span>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.10.3. </span>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">for(statement1;</span> <span class="pre">statement2;</span> <span class="pre">statement3){}</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">statement1</span></code> - execute once before the code block</p>
 <p><code class="docutils literal notranslate"><span class="pre">statement2</span></code> - defines the conditions</p>
@@ -570,7 +585,7 @@
 </div>
 </div>
 <div class="section" id="arrays">
-<h2><span class="section-number">4.11. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.11. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
 <p>when initiating the array the number of elements must be specific</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">animals</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;lion&quot;</span><span class="p">,</span> <span class="s">&quot;slug&quot;</span><span class="p">,</span> <span class="s">&quot;fish&quot;</span><span class="p">};</span>
 
@@ -595,7 +610,7 @@
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">4.12. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.12. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p>the idea that a new variable is a reference of an existing one</p>
 <p>uses <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></p>
 <p>it is also a soft copy, meaning that if the original is changed so is the link</p>
@@ -626,7 +641,7 @@
 </div>
 </div>
 <div class="section" id="pointers">
-<h2><span class="section-number">4.13. </span>Pointers<a class="headerlink" href="#pointers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.13. </span>Pointers<a class="headerlink" href="#pointers" title="Permalink to this headline">¶</a></h2>
 <p>pointers store the memory address as the value</p>
 <p>this becomes helpful when the <strong>data is large</strong></p>
 <p>rather than passing the data around (memory intensive), you pass its location</p>
@@ -665,7 +680,7 @@
 <p><em>modifying</em> - changes the original value stored at that memory location</p>
 </div>
 <div class="section" id="memory-usage">
-<h2><span class="section-number">4.14. </span>Memory usage<a class="headerlink" href="#memory-usage" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.14. </span>Memory usage<a class="headerlink" href="#memory-usage" title="Permalink to this headline">¶</a></h2>
 <p>We can assign and clear memory with the use of <code class="docutils literal notranslate"><span class="pre">new</span></code> and <code class="docutils literal notranslate"><span class="pre">delete</span></code></p>
 <blockquote>
 <div><p>The new operator should only be used if the data object should remain in memory until delete is called</p>
@@ -698,7 +713,7 @@
 </div>
 </div>
 <div class="section" id="stack-vs-heap">
-<h2><span class="section-number">4.15. </span>Stack vs Heap<a class="headerlink" href="#stack-vs-heap" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.15. </span>Stack vs Heap<a class="headerlink" href="#stack-vs-heap" title="Permalink to this headline">¶</a></h2>
 <p>2 different methods of allocating memory</p>
 <p><em>pointers allocate via the heap</em></p>
 <p><strong>Stack</strong></p>
@@ -765,7 +780,7 @@
 </div>
 </div>
 <div class="section" id="functions">
-<h2><span class="section-number">4.16. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.16. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">main()</span></code> is used to execute a block of code</p>
 <p>it is proceeded by a return value definition</p>
 <p><em>Return values definitions:</em></p>
@@ -792,7 +807,7 @@
 </div>
 </div>
 <div class="section" id="function-overloading">
-<h2><span class="section-number">4.17. </span>Function Overloading<a class="headerlink" href="#function-overloading" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.17. </span>Function Overloading<a class="headerlink" href="#function-overloading" title="Permalink to this headline">¶</a></h2>
 <p>instead of writing two functions for different inputs, we can make a function take multiple types of input</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -832,7 +847,7 @@
 </div>
 </div>
 <div class="section" id="oop">
-<h2><span class="section-number">4.18. </span>OOP<a class="headerlink" href="#oop" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.18. </span>OOP<a class="headerlink" href="#oop" title="Permalink to this headline">¶</a></h2>
 <p><em><strong>access specifiers</strong></em> <code class="docutils literal notranslate"><span class="pre">public</span></code> <code class="docutils literal notranslate"><span class="pre">private</span></code> <code class="docutils literal notranslate"><span class="pre">protected</span></code></p>
 <p>are used to specify the accessibility of members (attributes and methods) outside the class</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -860,7 +875,7 @@
 </pre></div>
 </div>
 <div class="section" id="assigning-methods">
-<h3><span class="section-number">4.18.1. </span><strong>Assigning methods</strong><a class="headerlink" href="#assigning-methods" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.18.1. </span><strong>Assigning methods</strong><a class="headerlink" href="#assigning-methods" title="Permalink to this headline">¶</a></h3>
 <p>Methods can be assigned <em><strong>inside</strong></em> and <em><strong>outside</strong></em> the class</p>
 <p><strong>Inside method</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">greetingInside</span>
@@ -890,7 +905,7 @@
 </div>
 </div>
 <div class="section" id="constructors">
-<h2><span class="section-number">4.19. </span>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.19. </span>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
 <p>a method that is called when the object is created</p>
 <p>use the <em><strong>same name as the class</strong></em> followed by <code class="docutils literal notranslate"><span class="pre">()</span></code></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -916,7 +931,7 @@
 <p>which may be used to set default values</p>
 </div>
 <div class="section" id="access-specifiers">
-<h2><span class="section-number">4.20. </span>Access specifiers<a class="headerlink" href="#access-specifiers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.20. </span>Access specifiers<a class="headerlink" href="#access-specifiers" title="Permalink to this headline">¶</a></h2>
 <p>There are 3 access speifiers in C++:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> - accessible outside the class</p></li>
@@ -926,7 +941,7 @@
 <p>By default, all members of a class are <code class="docutils literal notranslate"><span class="pre">private</span></code></p>
 </div>
 <div class="section" id="encapsulation">
-<h2><span class="section-number">4.21. </span>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.21. </span>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">¶</a></h2>
 <p>Encapsulation uses the <code class="docutils literal notranslate"><span class="pre">private</span></code> access specifier to ensure data is hidden from the user.</p>
 <p>To read or modify the data, we therefore reuire a <strong>get</strong> and <strong>set</strong> method</p>
 <p>It is good practice to use encapsulation, and thus the <code class="docutils literal notranslate"><span class="pre">private</span></code> specifier</p>
@@ -962,7 +977,7 @@
 </div>
 </div>
 <div class="section" id="inheritance">
-<h2><span class="section-number">4.22. </span>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.22. </span>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
 <p><strong>Base class</strong> - the parent</p>
 <p><strong>Derived class</strong> - the child</p>
 <p><code class="docutils literal notranslate"><span class="pre">:</span></code> is usd when defining a class</p>
@@ -1005,7 +1020,7 @@
 </div>
 </div>
 <div class="section" id="multiple-inheritance">
-<h2><span class="section-number">4.23. </span>Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.23. </span>Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">fish</span> <span class="o">:</span> <span class="k">public</span> <span class="n">animal</span><span class="p">,</span>
 						 <span class="k">public</span> <span class="n">underwater</span>
 <span class="p">{</span>
@@ -1053,7 +1068,7 @@
 </div>
 </div>
 <div class="section" id="protected">
-<h2><span class="section-number">4.24. </span>Protected<a class="headerlink" href="#protected" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.24. </span>Protected<a class="headerlink" href="#protected" title="Permalink to this headline">¶</a></h2>
 <p>allows for access within the inheritance class</p>
 <blockquote>
 <div><p>mark it private unless you have a good reason not to</p>
@@ -1096,7 +1111,7 @@
 </div>
 </div>
 <div class="section" id="polymorphism">
-<h2><span class="section-number">4.25. </span>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.25. </span>Polymorphism<a class="headerlink" href="#polymorphism" title="Permalink to this headline">¶</a></h2>
 <p>Inherited attributes and methods can be modified</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -1140,7 +1155,7 @@
 </div>
 </div>
 <div class="section" id="c-files">
-<h2><span class="section-number">4.26. </span>C++ Files<a class="headerlink" href="#c-files" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.26. </span>C++ Files<a class="headerlink" href="#c-files" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ofstream&gt;</span></code> - create and write files</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ifstream&gt;</span></code> - reads from files</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;fstream&gt;</span></code> - create, read, and writes</p>
@@ -1148,7 +1163,7 @@
 <p>in combination with <code class="docutils literal notranslate"><span class="pre">ofsteam</span></code> and <code class="docutils literal notranslate"><span class="pre">ifstream</span></code></p>
 </div>
 <div class="section" id="writing">
-<h2><span class="section-number">4.27. </span>Writing<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.27. </span>Writing<a class="headerlink" href="#writing" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -1168,7 +1183,7 @@
 </div>
 </div>
 <div class="section" id="reading">
-<h2><span class="section-number">4.28. </span>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.28. </span>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
 <p>uses <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">getline()</span></code></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
@@ -1193,7 +1208,7 @@
 </div>
 </div>
 <div class="section" id="exceptions">
-<h2><span class="section-number">4.29. </span>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.29. </span>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">try</span></code> - define the test code</p>
 <p><code class="docutils literal notranslate"><span class="pre">throw</span></code> - custom error to be caught be <code class="docutils literal notranslate"><span class="pre">catch</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">catch</span></code> - execute this when an error is thrown</p>
@@ -1255,8 +1270,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python_advanced.html" title="previous page"><span class="section-number">3. </span>Python: Advanced</a>
-    <a class='right-next' id="next-link" href="shell.html" title="next page"><span class="section-number">5. </span>Shell</a>
+    <a class='left-prev' id="prev-link" href="python_unit_testing.html" title="previous page"><span class="section-number">5. </span>Pytest</a>
+    <a class='right-next' id="next-link" href="shell.html" title="next page"><span class="section-number">7. </span>Shell</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

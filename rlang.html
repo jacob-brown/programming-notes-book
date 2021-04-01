@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. R &#8212; Programming Notes</title>
+    <title>8. R &#8212; Programming Notes</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="1. The Basics" href="ml_the_basics.html" />
-    <link rel="prev" title="5. Shell" href="shell.html" />
+    <link rel="prev" title="7. Shell" href="shell.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -116,23 +116,33 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="python_plotting.html">
+   4. Python: Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_unit_testing.html">
+   5. Python: Unit Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="cpp.html">
-   4. C++
+   6. C++
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="shell.html">
-   5. Shell
+   7. Shell
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. R
+   8. R
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="#basics">
-   7. Basics
+   9. Basics
   </a>
  </li>
 </ul>
@@ -253,76 +263,76 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   6. R
+   8. R
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basics">
-   7. Basics
+   9. Basics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variable-types">
-     7.1. Variable Types
+     9.1. Variable Types
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-structures">
-     7.2. Data Structures
+     9.2. Data Structures
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#vector">
-       7.2.1. Vector
+       9.2.1. Vector
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#matrix">
-       7.2.2. Matrix
+       9.2.2. Matrix
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#array">
-       7.2.3. Array
+       9.2.3. Array
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#dataframe">
-       7.2.4. Dataframe
+       9.2.4. Dataframe
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#lists">
-       7.2.5. Lists
+       9.2.5. Lists
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interacting-with-the-system">
-     7.3. Interacting with the system
+     9.3. Interacting with the system
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#control-flow">
-     7.4. Control flow
+     9.4. Control flow
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#functions">
-       7.4.1. Functions
+       9.4.1. Functions
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vectorisation">
-     7.5. Vectorisation
+     9.5. Vectorisation
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#apply-family">
-       7.5.1. Apply family
+       9.5.1. Apply family
       </a>
      </li>
     </ul>
@@ -341,11 +351,11 @@
               <div>
                 
   <div class="section" id="r">
-<h1><span class="section-number">6. </span>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h1>
 <p>This will be a basic overview of the <code class="docutils literal notranslate"><span class="pre">R</span></code> language.</p>
 </div>
 <div class="section" id="basics">
-<h1><span class="section-number">7. </span>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
 <p>Quickstart Syntax:</p>
 <ul class="simple">
 <li><p>R starts at 1 (not 0)</p></li>
@@ -362,7 +372,7 @@
 </div>
 </div>
 <div class="section" id="variable-types">
-<h2><span class="section-number">7.1. </span>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">class()</span></code> is used to determine the type.</p>
 <p>R by default uses numeric, rather than  int, float, double, etc.</p>
 <p><code class="docutils literal notranslate"><span class="pre">NA</span></code> - “NULL”/etc.</p>
@@ -405,7 +415,7 @@
 </div>
 </div>
 <div class="section" id="data-structures">
-<h2><span class="section-number">7.2. </span>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><em>vectors</em> - 1D, one data type</p></li>
 <li><p><em>matrix</em> - 2D, one data type</p></li>
@@ -414,7 +424,7 @@
 <li><p><em>list</em> - any size, many data types</p></li>
 </ul>
 <div class="section" id="vector">
-<h3><span class="section-number">7.2.1. </span>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.1. </span>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">245</span><span class="p">,</span> <span class="m">35</span><span class="p">)</span>
@@ -434,7 +444,7 @@
 </div>
 </div>
 <div class="section" id="matrix">
-<h3><span class="section-number">7.2.2. </span>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.2. </span>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># matrix</span>
@@ -458,7 +468,7 @@
 </div>
 </div>
 <div class="section" id="array">
-<h3><span class="section-number">7.2.3. </span>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.3. </span>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="nf">array</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">50</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
@@ -486,7 +496,7 @@
 </div>
 </div>
 <div class="section" id="dataframe">
-<h3><span class="section-number">7.2.4. </span>Dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.4. </span>Dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># dataframe</span>
@@ -576,7 +586,7 @@
 </div>
 </div>
 <div class="section" id="lists">
-<h3><span class="section-number">7.2.5. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.5. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">species</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;grizzly&quot;</span><span class="p">,</span> <span class="s">&quot;panda&quot;</span><span class="p">,</span> <span class="s">&quot;black&quot;</span><span class="p">)</span>
@@ -643,7 +653,7 @@
 </div>
 </div>
 <div class="section" id="interacting-with-the-system">
-<h2><span class="section-number">7.3. </span>Interacting with the system<a class="headerlink" href="#interacting-with-the-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Interacting with the system<a class="headerlink" href="#interacting-with-the-system" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">getwd()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">setwd()</span></code></p></li>
@@ -656,7 +666,7 @@
 </ul>
 </div>
 <div class="section" id="control-flow">
-<h2><span class="section-number">7.4. </span>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">next</span></code> can be used</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -714,7 +724,7 @@
 </div>
 </div>
 <div class="section" id="functions">
-<h3><span class="section-number">7.4.1. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.4.1. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">additionFunc</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">){</span>
@@ -733,7 +743,7 @@
 </div>
 </div>
 <div class="section" id="vectorisation">
-<h2><span class="section-number">7.5. </span>Vectorisation<a class="headerlink" href="#vectorisation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Vectorisation<a class="headerlink" href="#vectorisation" title="Permalink to this headline">¶</a></h2>
 <p>Applying an operation/function across a vector, matrix, etc. rather than iterating through each element.</p>
 <p>Create a function that <em>sums every element in the matrix</em> (without using <code class="docutils literal notranslate"><span class="pre">sum</span></code>)</p>
 <div class="cell docutils container">
@@ -826,7 +836,7 @@
 </div>
 </div>
 <div class="section" id="apply-family">
-<h3><span class="section-number">7.5.1. </span>Apply family<a class="headerlink" href="#apply-family" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.5.1. </span>Apply family<a class="headerlink" href="#apply-family" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">apply</span></code> - godfather of the applys</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lapply</span></code> - takes and returns lists</p></li>
@@ -911,7 +921,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="shell.html" title="previous page"><span class="section-number">5. </span>Shell</a>
+    <a class='left-prev' id="prev-link" href="shell.html" title="previous page"><span class="section-number">7. </span>Shell</a>
     <a class='right-next' id="next-link" href="ml_the_basics.html" title="next page"><span class="section-number">1. </span>The Basics</a>
 
     </div>

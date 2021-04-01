@@ -2,10 +2,14 @@
 
 Using `Vscode` and `pytest`.
 
+Ensure `vscode` is configured to use `pytest` as the default, it will automatically detect tests with the `tests_` prefix. 
+
+https://code.visualstudio.com/docs/python/testing
+
+
 Two files:
 1. `filename.py` - where the program is written
 2. `test_filename.py` - where the tests are written
-    * `test_` prefix lets vscode know that the test are here, this also applies to the functions 
 
 ## Program file: `filename.py`
 

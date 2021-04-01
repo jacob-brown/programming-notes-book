@@ -11,6 +11,10 @@
     title: "Python: Numpy and Pandas"
   - file: python_advanced
     title: "Python: Advanced"
+  - file: python_plotting
+    title: "Python: Plotting"
+  - file: python_unit_testing.md
+    title: "Python: Unit Testing"
   - file: cpp
     title: "C++"
   - file: shell

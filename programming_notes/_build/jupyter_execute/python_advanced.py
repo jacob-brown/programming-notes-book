@@ -857,3 +857,35 @@ here we wouldn't want `DatesWithSlashes` to override the static utility
 `__repr__()` is used to help with printing the object. 
 
 it gets called when you try to convert an object into a string through the various means that are available eg. `print()`, `str()`, etc.
+
+## Initiate and call method
+sometimes you may want to call a method when the class is initiated
+
+class animal:
+    def __init__(self, name):
+        self.name = name
+        self.sayName() # initiate here
+
+    def sayName(self):
+        print("I am a", self.name)
+
+dog = animal("dog")
+
+## kwargs
+Usage of `**kwargs` with classes. 
+Allow the user to input as many fields as they wish. 
+
+
+class Employee:
+    def __init__(self, fullname, **kwargs):
+        fullname_array = fullname.split()
+        self.name = fullname_array[0]
+        self.lastname = fullname_array[1]
+        self.__dict__.update(kwargs)
+
+
+jacob = Employee("Jacob Brown", height=180, mobile = "0123456789")
+print(jacob.name)
+print(jacob.lastname)
+print(jacob.height)
+print(jacob.__dict__)

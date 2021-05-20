@@ -295,6 +295,10 @@
     <span class="k">return</span> <span class="n">numberInput</span> <span class="o">+</span> <span class="mi">2</span>
 
 
+<span class="k">def</span> <span class="nf">printHello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+
 <span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">returnInputPlusTen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numberInput</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">numberInput</span> <span class="o">+</span> <span class="mi">10</span>
@@ -306,8 +310,6 @@
 <h2><span class="section-number">5.2. </span>Test file: <code class="docutils literal notranslate"><span class="pre">test_filename.py</span></code><a class="headerlink" href="#test-file-test-filename-py" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> method test initiates the test class object then runs the test</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">filename</span>
-
-
 <span class="k">def</span> <span class="nf">test_returnInputPlusFive</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">filename</span><span class="o">.</span><span class="n">returnInputPlusFive</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span>
 
@@ -316,9 +318,18 @@
     <span class="k">assert</span> <span class="n">filename</span><span class="o">.</span><span class="n">returnInputPlusTwo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
 
 
+<span class="k">def</span> <span class="nf">test_printHello</span><span class="p">(</span><span class="n">capsys</span><span class="p">):</span>
+    <span class="n">filename</span><span class="o">.</span><span class="n">printHello</span><span class="p">(</span><span class="s2">&quot;jacob&quot;</span><span class="p">)</span>
+    <span class="n">capture</span> <span class="o">=</span> <span class="n">capsys</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">capture</span><span class="o">.</span><span class="n">out</span> <span class="o">==</span> <span class="s2">&quot;hello jacob</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">assert</span> <span class="n">capture</span><span class="o">.</span><span class="n">err</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
+
+
 <span class="k">def</span> <span class="nf">test_returnInputPlusTen</span><span class="p">():</span>
     <span class="n">newObj</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">SomeClass</span><span class="p">()</span>
     <span class="k">assert</span> <span class="n">newObj</span><span class="o">.</span><span class="n">returnInputPlusTen</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">20</span>
+
+
 </pre></div>
 </div>
 </div>

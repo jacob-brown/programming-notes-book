@@ -416,6 +416,16 @@
    6.29. Exceptions
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libraries">
+   6.30. Libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-csv-to-vector">
+   6.31. Read CSV to Vector
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -1236,6 +1246,75 @@
 	<span class="p">}</span>
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="libraries">
+<h2><span class="section-number">6.30. </span>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
+<p>Contains 2 elements:</p>
+<ol class="simple">
+<li><p>includes - header files that link to binaries</p></li>
+<li><p>library - contains binaries</p></li>
+</ol>
+<p><strong>Linking libraries</strong>
+Static - library is in executable
+Dynamic - linked at run time (<code class="docutils literal notranslate"><span class="pre">.dll</span></code> file)</p>
+<p><em>for now use a static library</em></p>
+<p>We must point the compiler to the <em>header</em> files and the linker to the <em>library</em> files</p>
+<p><strong>Best practice</strong> - have a dependencies directory and build libraries here, as it keep all the project components together. Rather than a package manager.</p>
+</div>
+<div class="section" id="read-csv-to-vector">
+<h2><span class="section-number">6.31. </span>Read CSV to Vector<a class="headerlink" href="#read-csv-to-vector" title="Permalink to this headline">¶</a></h2>
+<p>Read a 1 column csv to a vector, fills new line</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vectorCSV_1DInt</span><span class="p">(</span><span class="n">string</span> <span class="n">filepath</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// setup elements</span>
+    <span class="n">ifstream</span> <span class="n">csvFile</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">csvElement</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">csvVector</span><span class="p">;</span>
+
+    <span class="c1">// open</span>
+    <span class="n">csvFile</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">);</span>
+
+    <span class="c1">// open file and fill vector</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">csvFile</span><span class="p">.</span><span class="n">eof</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">csvFile</span> <span class="o">&gt;&gt;</span> <span class="n">csvElement</span><span class="p">;</span>
+        <span class="n">csvVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">csvElement</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">csvVector</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">readVector</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vectorIn</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// length</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">vectorIn</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">// print to terminal</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">length</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">elem</span><span class="p">;</span>
+        <span class="n">elem</span> <span class="o">=</span> <span class="n">vectorIn</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">elem</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">newVector</span><span class="p">;</span>
+    <span class="n">newVector</span> <span class="o">=</span> <span class="n">vectorCSV_1DInt</span><span class="p">(</span><span class="s">&quot;file1.csv&quot;</span><span class="p">);</span>
+    <span class="n">readVector</span><span class="p">(</span><span class="n">newVector</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

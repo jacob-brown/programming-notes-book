@@ -22,6 +22,10 @@ def returnInputPlusTwo(numberInput):
     return numberInput + 2
 
 
+def printHello(name):
+    print("hello", name)
+
+
 class SomeClass:
     def returnInputPlusTen(self, numberInput):
         return numberInput + 10
@@ -33,8 +37,6 @@ The `class` method test initiates the test class object then runs the test
 
 ```python
 import filename
-
-
 def test_returnInputPlusFive():
     assert filename.returnInputPlusFive(3) == 8
 
@@ -43,7 +45,16 @@ def test_returnInputPlusTwo():
     assert filename.returnInputPlusTwo(3) == 5
 
 
+def test_printHello(capsys):
+    filename.printHello("jacob")
+    capture = capsys.readouterr()
+    assert capture.out == "hello jacob\n"
+    assert capture.err == ""
+
+
 def test_returnInputPlusTen():
     newObj = filename.SomeClass()
     assert newObj.returnInputPlusTen(10) == 20
+
+
 ```

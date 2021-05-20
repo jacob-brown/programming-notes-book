@@ -174,6 +174,7 @@ do
 
 `statement3` - executed after the code block has executed
 
+**iter by length**
 ```cpp
 for (int i = 0; i < 5; i++)
 	{
@@ -181,6 +182,22 @@ for (int i = 0; i < 5; i++)
 	}
 ```
 
+**iter by element**
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5};
+
+    for (int &elem : arr)
+    {
+        cout << elem << "\n";
+    }
+}
+```
 ## Arrays
 
 when initiating the array the number of elements must be specific
@@ -900,3 +917,75 @@ int main()
 	return 0;
 }
 ```
+
+## Libraries
+Contains 2 elements:
+1. includes - header files that link to binaries
+2. library - contains binaries
+
+**Linking libraries**
+Static - library is in executable
+Dynamic - linked at run time (`.dll` file)
+
+*for now use a static library*
+
+We must point the compiler to the *header* files and the linker to the *library* files
+
+**Best practice** - have a dependencies directory and build libraries here, as it keep all the project components together. Rather than a package manager. 
+
+## Read CSV to Vector
+Read a 1 column csv to a vector, fills new line
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+vector<int> vectorCSV_1DInt(string filepath)
+{
+    // setup elements
+    ifstream csvFile;
+    int csvElement;
+    vector<int> csvVector;
+
+    // open
+    csvFile.open(filepath);
+
+    // open file and fill vector
+    while (!csvFile.eof())
+    {
+        csvFile >> csvElement;
+        csvVector.push_back(csvElement);
+    }
+
+    return csvVector;
+}
+
+void readVector(vector<int> vectorIn)
+{
+    // length
+    int length = vectorIn.size() - 1;
+
+    // print to terminal
+    for (int n = 0; n <= length; n++)
+    {
+        int elem;
+        elem = vectorIn.at(n);
+
+        cout << elem << "\n";
+    }
+}
+
+int main()
+{
+
+    vector<int> newVector;
+    newVector = vectorCSV_1DInt("file1.csv");
+    readVector(newVector);
+    return 0;
+}
+
+```
+
